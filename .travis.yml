@@ -1,13 +1,8 @@
 language: node_js
 node_js:
- — “0.10"
+— "8"
 install:
  — npm install
  — npm install -g mocha
  — npm install -g chai
-before_script:
- - mocha 
-script:
- — mocha-phantomjs test/*
- — make test
 
