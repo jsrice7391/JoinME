@@ -1,18 +1,24 @@
 {
-  "name": "project2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Justin Rice <jsrice7391@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
-    "path": "^0.12.7"
-  }
+    "name": "project2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "Justin Rice <jsrice7391@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "express-handlebars": "^3.0.0",
+        "nodemon": "^1.14.7",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "jasmine": "^2.8.0",
+        "mocha": "^4.1.0"
+    }
 }
