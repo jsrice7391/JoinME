@@ -6,6 +6,7 @@ USE projects_db;
 CREATE TABLE user_table
 (
 	id int NOT NULL AUTO_INCREMENT,
+	user_name varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
