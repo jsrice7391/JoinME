@@ -3,7 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const app = express();
 const exphb = require("express-handlebars");
-
+const db = require("./models");
 
 var PORT = process.env.PORT || 8000;
 
@@ -26,6 +26,9 @@ require("./routes/htmlroutes")(app);
 
 
 // Start the app
+
+db.sequelize.sync();
+
 app.listen(PORT, function() {
     console.log("APP is listening on Port: " + PORT);
 });

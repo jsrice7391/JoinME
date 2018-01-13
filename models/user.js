@@ -3,6 +3,5 @@ module.exports = function(sequelize, Datatype) {
         name: Datatype.STRING,
     });
 
-    User.belongsTo(Company);
     return User;
 }
