@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       len: [1]
     },
     Completed: {
-        type: DataTypes.boleanField,
+        type: DataTypes.booleanField,
         allowNull: false,
         default:false}
   });
