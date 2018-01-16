@@ -1,75 +1,68 @@
-// On page load hide sign out button if not signed in.
 $(document).ready(function () {
-    
-        $("#btnSignOut").hide();
-    
+    // alert("page load");
+
+    // Click event for user sign in. Sign in button is located on index.html. When clicked the sign in modal will appear.
+    $("#btnSignIn").on("click", function (event) {
+        // alert("click worked");
+        signIn();
     });
-    
+
+    // Click event for signing out. Sign out button is located on user.handlebars. When clicked a user will be redirected back to login.html.
+    $("#btnSignOut").on("click", function (event) {
+        signtOut();
+    })
+
     // Initialize Firebase
     var config = {
-        apiKey: "AIzaSyCmj08LcW2dT_bGaFPFqNcnoID7ZRqzQJw",
-        authDomain: "knowbeforugo.firebaseapp.com",
-        databaseURL: "https://knowbeforugo.firebaseio.com",
-        projectId: "knowbeforugo",
-        storageBucket: "knowbeforugo.appspot.com",
-        messagingSenderId: "172400475054"
+        apiKey: "AIzaSyBtYPFjB-gpNIw8wRKnKao7lKSJ7Rho3bo",
+        authDomain: "joinme-3d32e.firebaseapp.com",
+        databaseURL: "https://joinme-3d32e.firebaseio.com/",
+        projectId: "joinme-3d32e",
+        storageBucket: "gs://joinme-3d32e.appspot.com",
+        messagingSenderId: "302936142479"
     };
     firebase.initializeApp(config);
-    
+
+    // Create an instance of the Google provider object
     var provider = new firebase.auth.GoogleAuthProvider();
     var user;
-    
-    // listen for authorization state change.
-    // if user is logged in run the showWelcome function.
-    // if user is not logged in run the showGoodBuy function
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log("you are logged in");
-            showWelcome();
-        } else {
-            console.log("you arent logged in");
-            showGoodBye();
-        }
-    });
-    
-    // sign in function w/ error handling.
+
+    // Sign in function w/ error handling.
     function signIn() {
         firebase.auth().signInWithPopup(provider).then(function (result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
             var token = result.credential.accessToken;
+            // The signed-in user info.
             user = result.user;
-            showWelcome();
-    
+            // showWelcome(); WILL BE SHOWN ON THE REDIRECTED USER PAGE
         }).catch(function (error) {
+            // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
+            // The email of the user's account used.
             var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
         });
     };
-    
-    // sign out function w/ error handling.
+
+    // Sign out function w/ error handling. WILL AMEND WHEN ROUTES ARE COMPLETE
     function signOut() {
         firebase.auth().signOut().then(function () {
-            showGoodBye();
+            window.location.href = "login.html";
         }).catch(function (error) {
+            // An error happened.
             var errorCode = error.code;
             var errorMessage = error.message;
             var email = error.email;
             var credential = error.credential;
         });
     }
-    
-    // show welcome message
+
+    // Show welcome message
     function showWelcome() {
         $("#btnSignOut").show();
-        $("#btnSignIn").hide();
         $("#user-name").html("Welcome " + user.displayName);
     }
-    
-    // show goodbye message
-    function showGoodBye() {
-        $("#btnSignIn").show();
-        $("#btnSignOut").hide();
-    }
-    
-    
+
+});
