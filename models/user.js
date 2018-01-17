@@ -3,5 +3,16 @@ module.exports = function(sequelize, Datatype) {
         name: Datatype.STRING,
     });
 
+
+    User.associate = function(models) {
+        // Associating Author with Posts
+        // When an Author is deleted, also delete any associated Posts
+        User.belongsToMany(models.Project, {
+            through: "UserProject",
+            onDelete: "cascade"
+        });
+    };
+    // Project.belongsToMany(User, { through: 'UserProject' });
+    // User.belongsToMany(Project, { through: 'UserProject' });
     return User;
 }
