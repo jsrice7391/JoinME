@@ -1,6 +1,8 @@
 var expect = require("chai").expect;
 const testing = require("../routes/testing.js");
 
+var Nightmare = require("nightmare");
+var nightmare = Nightmare({ show: true });
 
 describe("Multiply", function() {
     it("should multiply properly when passed numbers", function() {
@@ -13,3 +15,12 @@ describe("Multiply", function() {
         }).to.throw(Error);
     });
 });
+
+describe("CreateNewProjectButton", function() {
+    it("should open the modal containing the project creation form when clicked"), function() {
+        expect(function() {
+
+        })
+    }
+})
+

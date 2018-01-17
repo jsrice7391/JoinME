@@ -1,12 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JoinMe</title>
-</head>
-<body>
-    <button class="btn btn-default" id="createNewProjectBtn">Create a Project</button>
-</body>
-</html>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
+
+<div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createProjectModalLabel">Create your project:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="projectName" class="col-form-label">Project Name:</label>
+                        <input type="text" class="form-control" id="projectName">
+                    </div>
+                   <div class="form-group">
+                        <label for="projectType" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="projectType">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="projectDescription"></textarea>
+                    </div>
+                     <div class="form-group">
+                        <label for="stepOne" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="StepOne">
+                    </div>
+                       <div class="form-group">
+                        <label for="stepOneDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="stepOneDescription"></textarea>
+                    </div>
+                         <div class="form-group">
+                        <label for="stepTwo" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="StepTwo">
+                    </div>
+                       <div class="form-group">
+                        <label for="stepTwoDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="stepTwoDescription"></textarea>
+                    </div>
+                         <div class="form-group">
+                        <label for="stepThree" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="StepThree">
+                    </div>
+                       <div class="form-group">
+                        <label for="stepThreeDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="stepThreeDescription"></textarea>
+                    </div>
+                         <div class="form-group">
+                        <label for="stepFour" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="StepFour">
+                    </div>
+                       <div class="form-group">
+                        <label for="stepFourDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="stepFourDescription"></textarea>
+                    </div>
+                         <div class="form-group">
+                        <label for="stepFive" class="col-form-label">Project Type:</label>
+                        <input type="text" class="form-control" id="StepFive">
+                    </div>
+                       <div class="form-group">
+                        <label for="stepFiveDescription" class="col-form-label">Project Description:</label>
+                        <textarea class="form-control" id="stepFiveDescription"></textarea>
+                    </div>
+
+                    <h5>Now be on your way to achieving your goals.</h5>
+                </form>
+            </div>
+            <div class="modal-footer">
+                {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> --}}
+                <button type="button" class="btn btn-primary" value="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
