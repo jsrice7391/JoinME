@@ -1,75 +1,55 @@
-// On page load hide sign out button if not signed in.
 $(document).ready(function () {
-    
-        $("#btnSignOut").hide();
-    
-    });
-    
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCmj08LcW2dT_bGaFPFqNcnoID7ZRqzQJw",
-        authDomain: "knowbeforugo.firebaseapp.com",
-        databaseURL: "https://knowbeforugo.firebaseio.com",
-        projectId: "knowbeforugo",
-        storageBucket: "knowbeforugo.appspot.com",
-        messagingSenderId: "172400475054"
-    };
-    firebase.initializeApp(config);
-    
-    var provider = new firebase.auth.GoogleAuthProvider();
-    var user;
-    
-    // listen for authorization state change.
-    // if user is logged in run the showWelcome function.
-    // if user is not logged in run the showGoodBuy function
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            console.log("you are logged in");
-            showWelcome();
-        } else {
-            console.log("you arent logged in");
-            showGoodBye();
-        }
-    });
-    
-    // sign in function w/ error handling.
-    function signIn() {
-        firebase.auth().signInWithPopup(provider).then(function (result) {
-            var token = result.credential.accessToken;
-            user = result.user;
-            showWelcome();
-    
-        }).catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-        });
-    };
-    
-    // sign out function w/ error handling.
-    function signOut() {
-        firebase.auth().signOut().then(function () {
-            showGoodBye();
-        }).catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            var email = error.email;
-            var credential = error.credential;
-        });
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBtYPFjB-gpNIw8wRKnKao7lKSJ7Rho3bo",
+    authDomain: "joinme-3d32e.firebaseapp.com",
+    databaseURL: "https://joinme-3d32e.firebaseio.com/",
+    projectId: "joinme-3d32e",
+    storageBucket: "gs://joinme-3d32e.appspot.com",
+    messagingSenderId: "302936142479"
+  };
+  firebase.initializeApp(config);
+
+
+  // FirebaseUI config.
+  var uiConfig = {
+    signInSuccessUrl: "../views/index.handlebars",
+    signInOptions: [
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    ],
+    // Terms of service url.
+    tosUrl: '<your-tos-url>'
+  };
+
+  // Initialize the FirebaseUI Widget using Firebase.
+  var ui = new firebaseui.auth.AuthUI(firebase.auth());
+  // The start method will wait until the DOM is loaded.
+  ui.start('#firebaseui-auth-container', uiConfig);
+
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var uid = user.uid;
+      var phoneNumber = user.phoneNumber;
+      var providerData = user.providerData;
+      user.getIdToken().then(function (accessToken) {
+        document.getElementById('welcomeUserWithName').textContent = user.displayName;
+      });
+    } else {
+      // User is signed out.
+      // document.getElementById('sign-in-status').textContent = 'Signed out';
+      // document.getElementById('sign-in').textContent = 'Sign in';
+      // document.getElementById('account-details').textContent = 'null';
     }
-    
-    // show welcome message
-    function showWelcome() {
-        $("#btnSignOut").show();
-        $("#btnSignIn").hide();
-        $("#user-name").html("Welcome " + user.displayName);
-    }
-    
-    // show goodbye message
-    function showGoodBye() {
-        $("#btnSignIn").show();
-        $("#btnSignOut").hide();
-    }
-    
-    
+  }, function (error) {
+    console.log(error);
+  });
+
+
+  //end document.ready
+});

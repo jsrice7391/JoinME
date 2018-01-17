@@ -18,5 +18,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-
-};
+  app.get("/userPage", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+  });
+  
+}
