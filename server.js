@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Allow the assets folder to be used for static content
-// app.use("/public", express.static("public"));
+app.use("/public", express.static("public"));
 app.use(express.static("public"));
 
 
