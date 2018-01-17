@@ -1,30 +1,31 @@
 module.exports = function(sequelize, DataTypes) {
-  var Steps = sequelize.define("Post", {
-    Step: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    Step_description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      len: [1]
-    },
-    Completed: {
-        type: DataTypes.booleanField,
-        allowNull: false,
-        default:false}
-  });
-
-  Steps.associate = function (models) {
-    models.Steps.belongsTo(models.project, {
-      onDelete: "CASCADE",
-      foreignKey: {
-        allowNull: false
-      }
+    var Step = sequelize.define("Step", {
+        Step: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        Step_description: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            len: [1]
+        },
+        Completed: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            default: false
+        }
     });
-  };
-  return Steps;
+
+    Step.associate = function(models) {
+        Step.belongsTo(models.Project, {
+            onDelete: "CASCADE",
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+    return Step;
 };
