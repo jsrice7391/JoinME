@@ -1,0 +1,212 @@
+/* navbar */
+#joinmeNavbar {
+    background-color: #222222;
+}
+#joinmeNavLink {
+    color: #e3f2fd;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 20px;       
+}
+
+.nav-link {
+    color: #9e9e9e;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 14px;
+}
+
+/* welcome panel */
+#welcomePanel {
+    width: 700px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #eeeeee;
+    border-radius: 15px;
+}
+
+#welcomePanelBody {
+    padding: 3rem;
+    padding-bottom: 40px;
+}
+
+#welcomePanelTitle {
+    margin-bottom: 20px;
+    font-size: 58px;
+    color: #000000;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+}
+
+#welcomePanelText {
+    font-size: 18px;
+    color: #333333;
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.5em;
+    
+}
+
+#createProjectBtn {
+    display: inline-block;
+    width: 175px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 70px;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: 'Arimo', sans-serif;     
+}
+
+#projectSearchInput {
+    width: 200px;
+    margin-top: 20px;
+    margin-right: 40px;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-family: 'Arimo', sans-serif;   
+}
+
+/* create project modal */
+.modal-content {
+    width: 800px;
+    font-family: 'Arimo', sans-serif;    
+}
+
+.modal-header {
+    background-color: #222222;
+}
+
+.modal-title {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+#closeModalBtn {
+    color: #ffffff;    
+    margin-left: 0px;
+}
+
+.modal-body {
+    background-color: #f5f5f5;
+}
+
+.form-group {
+    display: inline-block;
+}
+
+.form-control {
+    background-color: #ffffff;
+}
+
+#createProjectModalLabels {
+    margin-left: 40px;
+    color: #424242;
+    font-size: 18px;
+}
+
+.input-group-prepend {
+    margin-left: 40px;
+}
+
+#projectName {
+    width: 680px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 2rem;
+}
+
+#projectType {
+    width: 480px;
+    /* margin-left: 40px; */
+    margin-right: 40px;
+}
+
+#projectDescription {
+    margin-left: 40px;
+    width: 680px;
+} 
+
+#stepOne {
+    margin-left: 40px;
+    width: 680px;
+}
+
+#stepOneDescription {
+    margin-left: 40px;
+    width: 680px;
+}
+
+#stepTwo {
+    margin-left: 40px;
+    width: 680px;
+}
+
+#stepTwoDescription {
+    margin-left: 40px;
+    width: 680px;
+}
+
+#stepThree {
+    margin-left: 40px;
+    width: 680px;  
+}
+
+#stepThreeDescription {
+    margin-left: 40px;
+    width: 680px;  
+}
+
+#stepFour {
+    margin-left: 40px;
+    width: 680px;  
+}
+
+#stepFourDescription {
+    margin-left: 40px;
+    width: 680px;    
+}
+
+#stepFive {
+    margin-left: 40px;
+    width: 680px; 
+}
+
+#stepFiveDescription {
+    margin-left: 40px;
+    width: 680px;   
+}
+
+#submitFormGroup {
+    margin-top: 15px;
+}
+
+.modalGoodbyeMessage {
+    display: inline-block;
+    text-align: center;
+    width: 450px;
+    margin-left: 100px;
+    font-size: 25px;    
+    color: #222222;  
+}
+
+#submitModalBtn {
+    background-color: #424242;
+    color: #ffffff;
+}
+
+/* user's projects table */
+.card {
+    width: 1000px;
+    margin: 0 auto;
+    font-family: 'Arimo', sans-serif;     
+}
