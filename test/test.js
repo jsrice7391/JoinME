@@ -1,9 +1,6 @@
 var expect = require("chai").expect;
 const testing = require("../routes/testing.js");
 
-var Nightmare = require("nightmare");
-var nightmare = Nightmare({ show: true });
-
 describe("Multiply", function() {
     it("should multiply properly when passed numbers", function() {
         expect(testing.multiply(2, 4)).to.equal(8);
