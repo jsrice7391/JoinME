@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         Completed: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
-            default: false
+            defaultValue: false
         }
     });
 
@@ -27,5 +27,12 @@ module.exports = function(sequelize, DataTypes) {
             }
         });
     };
+
+    Step.afterValidate(function(step) {
+        if (step.Completed === "True") {
+          console.log("Send message")
+        }
+      })
+
     return Step;
 };
