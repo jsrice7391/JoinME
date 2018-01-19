@@ -22,7 +22,7 @@ app.engine("handlebars", exphb({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Create some routers
-require("./routes/appRoutes")(app);
+require("./routes/projects_api_routes")(app);
 require("./routes/htmlroutes")(app);
 
 
