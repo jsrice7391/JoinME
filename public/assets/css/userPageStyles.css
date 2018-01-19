@@ -204,7 +204,17 @@
     color: #ffffff;
 }
 
-/* user's projects table */
+.modal-footer {
+    background-color: #222222;
+}
+
+#dismissModalBtn {
+    background-color: #ffffff;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;         
+}
+
+/* user's projects list */
 .card {
     width: 1000px;
     margin: 0 auto;

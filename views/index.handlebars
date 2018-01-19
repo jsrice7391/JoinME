@@ -54,23 +54,6 @@
                         </div>
                     </div>
 
-                    {{!--
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Project Type</button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Fitness</a>
-                                        <a class="dropdown-item" href="#">Diet</a>
-                                        <a class="dropdown-item" href="#">Social</a>
-                                    </div>
-                                </div>
-                                <input type="text" class="form-control" id="projectType" aria-label="Text input with dropdown button">
-                            </div>
-                        </div>
-                    </div> --}}
-
                     <div class="form-group">
                         <label for="projectDescription" class="col-form-label" id="createProjectModalLabels">Project Description:</label>
                         <textarea class="form-control" id="projectDescription"></textarea>
@@ -132,7 +115,10 @@
                     </div>
                 </form>
             </div>
-
+            <div class="modal-footer">
+                {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+                <button type="button" class="btn btn-secondary" id="dismissModalBtn" data-dismiss="modal">close</button>
+            </div>
         </div>
     </div>
 </div>
