@@ -1,16 +1,42 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light" id="joinmeNavbar">
+    <a class="nav-link" id="joinmeNavLink" href="#">JoinMe</a>
+    <a class="nav-link active" href="#">Home</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">Sign Out</a>
+</nav>
 
+{{!-- welcome panel --}}
+<div class="card" id="welcomePanel">
+    <div class="card-body" id="welcomePanelBody">
+        <h5 class="card-title" id="welcomePanelTitle">Hello, emma!</h5>
+        <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
+            for existing projects to join in on.
+        </h6>
+
+        <div class="input-group" id="welcomePanelInputGroup">
+            <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
+            <input type="text" class="form-control" id="projectSearchInput" placeholder="Search for Projects"></input>
+            <div class="input-group-append">
+                <span class="glyphicon glyphicon-search"></span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{{!-- create project modal --}}
 <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Create your Project</h5>
                 <button type="button" class="close" id="closeModalBtn" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+                      <span aria-hidden="true">&times;</span>
+                    </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="newProjectForm">
                     <div class="form-group">
                         <label for="projectName" class="col-form-label" id="createProjectModalLabels">Project Name:</label>
                         <input type="text" class="form-control" id="projectName">
@@ -74,16 +100,22 @@
                         <label for="stepFiveDescription" class="col-form-label" id="createProjectModalLabels">Step Five Description:</label>
                         <textarea class="form-control" id="stepFiveDescription"></textarea>
                     </div>
-                    <div class="form-group">
-                        <h5 class="modalGoodbyeMessage">Now be on your way to achieving your goals!</h5>
-                        <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" data-id="{{id}}">Submit</button>
+                    <div class="form-group" id="submitFormGroup">
+                        <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
+                        <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" data-id="{{id}}">submit</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
 
         </div>
     </div>
+</div>
+
+{{!-- user projects table --}}
+<div class="card">
+    <div class="card-header">Your Projects</div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+    </div>
+    <div class="card-footer text-muted"></div>
 </div>
