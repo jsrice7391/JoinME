@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+  var firebase = require('firebase');
+  var firebaseui = require('firebaseui');
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBtYPFjB-gpNIw8wRKnKao7lKSJ7Rho3bo",
