@@ -25,8 +25,6 @@ app.set("view engine", "handlebars");
 require("./routes/user_routes")(app);
 require("./routes/htmlroutes")(app);
 
-
-
 // Start the app
 
 db.sequelize.sync({ force: true }).then(function() {
