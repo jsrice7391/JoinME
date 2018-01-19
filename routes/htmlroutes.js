@@ -19,9 +19,11 @@ module.exports = function (app) {
   });
 
   // load the index page
-  app.get("/index", function (req, res) {
-    res.sendFile(path.join(__dirname, "../views/index.handlebars"));
-  });
+  app.get("/index", function(req, res) {
+    res.render("index");
+  // app.get("/index", function (req, res) {
+  //   res.sendFile(path.join(__dirname, "../views/index.handlebars"));
+  // });
 
   // loads the about page
   app.get("/about", function (req, res) {
