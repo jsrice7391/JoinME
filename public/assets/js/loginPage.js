@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-  var firebase = require('firebase');
-  var firebaseui = require('firebaseui');
-
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBtYPFjB-gpNIw8wRKnKao7lKSJ7Rho3bo",
@@ -17,7 +14,7 @@ $(document).ready(function () {
 
   // FirebaseUI config.
   var uiConfig = {
-    signInSuccessUrl: "../views/index.hbs",
+    signInSuccessUrl: "/index",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
