@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   // FirebaseUI config.
   var uiConfig = {
-    signInSuccessUrl: "../views/index.hbs",
+    signInSuccessUrl: "/index",
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     ],
