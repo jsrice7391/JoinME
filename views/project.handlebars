@@ -1,0 +1,15 @@
+{{!-- user projects table --}}
+<div class="card">
+    <div class="card-header">{{this.projectName}}</div>
+
+    <table style="width:100%">
+        <tr>
+            {{#each this.step}}
+            <th>{{this.step}}</th>
+            <th>{{this.complete}}</th>
+            {{/each}}
+        </tr>
+   
+    </table>
+    <div class="card-footer text-muted"></div>
+</div>
