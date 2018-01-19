@@ -1,106 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./public/assets/css/userPageStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 </head>
+
 <body>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
-        
-        <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Create your Project</h5>
-                        <button type="button" class="close" id="closeModalBtn" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="newProjectForm">
-                            <div class="form-group">
-                                <label for="projectName" class="col-form-label" id="createProjectModalLabels">Project Name:</label>
-                                <input type="text" class="form-control" id="projectName">
-                            </div>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Project Type</button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#">Fitness</a>
-                                                <a class="dropdown-item" href="#">Diet</a>
-                                                <a class="dropdown-item" href="#">Social</a>
-                                            </div>
-                                        </div>
-                                        <input type="text" class="form-control" id="projectType" aria-label="Text input with dropdown button">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="projectDescription" class="col-form-label" id="createProjectModalLabels">Project Description:</label>
-                                <textarea class="form-control" id="projectDescription"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="stepOne" class="col-form-label" id="createProjectModalLabels">Step One:</label>
-                                <input type="text" class="form-control" id="stepOne">
-                            </div>
-                            <div class="form-group">
-                                <label for="stepOneDescription" class="col-form-label" id="createProjectModalLabels">Step One Description:</label>
-                                <textarea class="form-control" id="stepOneDescription"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="stepTwo" class="col-form-label" id="createProjectModalLabels">Step Two:</label>
-                                <input type="text" class="form-control" id="stepTwo">
-                            </div>
-                            <div class="form-group">
-                                <label for="stepTwoDescription" class="col-form-label" id="createProjectModalLabels">Step Two Description:</label>
-                                <textarea class="form-control" id="stepTwoDescription"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="stepThree" class="col-form-label" id="createProjectModalLabels">Step Three:</label>
-                                <input type="text" class="form-control" id="stepThree">
-                            </div>
-                            <div class="form-group">
-                                <label for="stepThreeDescription" class="col-form-label" id="createProjectModalLabels">Step Three Description:</label>
-                                <textarea class="form-control" id="stepThreeDescription"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="stepFour" class="col-form-label" id="createProjectModalLabels">Step Four:</label>
-                                <input type="text" class="form-control" id="stepFour">
-                            </div>
-                            <div class="form-group">
-                                <label for="stepFourDescription" class="col-form-label" id="createProjectModalLabels">Step Four Description:</label>
-                                <textarea class="form-control" id="stepFourDescription"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="stepFive" class="col-form-label" id="createProjectModalLabels">Step Five:</label>
-                                <input type="text" class="form-control" id="stepFive">
-                            </div>
-                            <div class="form-group">
-                                <label for="stepFiveDescription" class="col-form-label" id="createProjectModalLabels">Step Five Description:</label>
-                                <textarea class="form-control" id="stepFiveDescription"></textarea>
-                            </div>
-                            <div class="form-group" id="submitFormGroup">
-                                <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
-                                <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" data-id="{{id}}">submit</button>
-                            </div>
-                        </form>
-                    </div>
-        
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="joinmeNavbar">
+        <a class="nav-link" id="joinmeNavLink" href="#">JoinMe</a>
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#">Sign Out</a>
+    </nav>
+
+    <div class="card" id="welcomePanel">
+        <div class="card-body" id="welcomePanelBody">
+            <h5 class="card-title" id="welcomePanelTitle">Hello, emma!</h5>
+            <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
+                for existing projects to join in on.
+            </h6>
+
+            <div class="input-group" id="welcomePanelInputGroup">
+                <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
+                <input type="text" class="form-control" id="projectSearchInput" placeholder="Search for Projects"></input>
+                <div class="input-group-append">
+                    <span class="glyphicon glyphicon-search"></span>
                 </div>
             </div>
+
         </div>
+    </div>
+
+    <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create your Project</h5>
+                    <button type="button" class="close" id="closeModalBtn" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="newProjectForm">
+                        <div class="form-group">
+                            <label for="projectName" class="col-form-label" id="createProjectModalLabels">Project Name:</label>
+                            <input type="text" class="form-control" id="projectName">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose a Project Type</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Fitness</a>
+                                            <a class="dropdown-item" href="#">Diet</a>
+                                            <a class="dropdown-item" href="#">Social</a>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" id="projectType" aria-label="Text input with dropdown button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDescription" class="col-form-label" id="createProjectModalLabels">Project Description:</label>
+                            <textarea class="form-control" id="projectDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="stepOne" class="col-form-label" id="createProjectModalLabels">Step One:</label>
+                            <input type="text" class="form-control" id="stepOne">
+                        </div>
+                        <div class="form-group">
+                            <label for="stepOneDescription" class="col-form-label" id="createProjectModalLabels">Step One Description:</label>
+                            <textarea class="form-control" id="stepOneDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="stepTwo" class="col-form-label" id="createProjectModalLabels">Step Two:</label>
+                            <input type="text" class="form-control" id="stepTwo">
+                        </div>
+                        <div class="form-group">
+                            <label for="stepTwoDescription" class="col-form-label" id="createProjectModalLabels">Step Two Description:</label>
+                            <textarea class="form-control" id="stepTwoDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="stepThree" class="col-form-label" id="createProjectModalLabels">Step Three:</label>
+                            <input type="text" class="form-control" id="stepThree">
+                        </div>
+                        <div class="form-group">
+                            <label for="stepThreeDescription" class="col-form-label" id="createProjectModalLabels">Step Three Description:</label>
+                            <textarea class="form-control" id="stepThreeDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="stepFour" class="col-form-label" id="createProjectModalLabels">Step Four:</label>
+                            <input type="text" class="form-control" id="stepFour">
+                        </div>
+                        <div class="form-group">
+                            <label for="stepFourDescription" class="col-form-label" id="createProjectModalLabels">Step Four Description:</label>
+                            <textarea class="form-control" id="stepFourDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="stepFive" class="col-form-label" id="createProjectModalLabels">Step Five:</label>
+                            <input type="text" class="form-control" id="stepFive">
+                        </div>
+                        <div class="form-group">
+                            <label for="stepFiveDescription" class="col-form-label" id="createProjectModalLabels">Step Five Description:</label>
+                            <textarea class="form-control" id="stepFiveDescription"></textarea>
+                        </div>
+                        <div class="form-group" id="submitFormGroup">
+                            <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
+                            <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" data-id="{{id}}">submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Your Projects</div>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+        </div>
+        <ul class="list-group">
+            {{#each projectName}}
+            <li class="list-group-item">
+                <h3 class="projectNameTitle">{{this.projectName}}</h3>
+            </li>
+            {{/each}}
+        </ul>
+        <div class="card-footer text-muted"></div>
+    </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -12,11 +12,11 @@ $(document).ready(function () {
             e.preventDefault();
             alert($('#projectName').val());
     
-            $.post('http://path/to/post',
-                $('#newProjectForm').serialize(),
-                function (data, status, xhr) {
-                    // do something here with response;
-                });
+            // $.post('http://path/to/post',
+            //     $('#newProjectForm').serialize(),
+            //     function (data, status, xhr) {
+            //         // do something here with response;
+            //     });
     
         });
     });
