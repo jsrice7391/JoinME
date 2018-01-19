@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Project = sequelize.define("Project", {
-        Poject_name: {
+        Project_name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
