@@ -42,14 +42,31 @@ $(document).ready(function () {
       });
     } else {
       // User is signed out.
-      // document.getElementById('sign-in-status').textContent = 'Signed out';
-      // document.getElementById('sign-in').textContent = 'Sign in';
-      // document.getElementById('account-details').textContent = 'null';
+      console.log("User is signed out");
     }
   }, function (error) {
     console.log(error);
   });
 
+  // sign out function w/ error handling.
+  $("#btnSignOut").on("click", function () {
+    alert("btn worked");
+    function signOut() {
+      firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+        alert("signed out");
+      }).catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+      });
+    }
+  });
+
+  $("#testBtn").on("click", function() {
+    alert("button worked");
+  });
 
   //end document.ready
 });
