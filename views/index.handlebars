@@ -116,25 +116,25 @@
                 </form>
             </div>
             <div class="modal-footer">
-                {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
                 <button type="button" class="btn btn-secondary" id="dismissModalBtn" data-dismiss="modal">close</button>
             </div>
         </div>
     </div>
 </div>
 
+{{!-- UNTESTED HANDLEBARS --}}
 {{!-- user projects list --}}
 <div class="card">
-    <div class="card-header">Your Projects</div>
-    <div class="card-body">
-        <h5 class="card-title"></h5>
-    </div>
-    <ul class="list-group">
-        {{#each projectName}}
-        <li class="list-group-item">
-            <h3 class="projectNameTitle">{{this.projectName}}</h3>
-        </li>
+    <div class="card-header" id="projectListPanelHeader">Your JoinMe Projects</div>
+    <div class="card-body" id="projectListPanelBody">
+        <ul class="list-group">
+        {{#each Project}}
+            <li class="list-group-item" id="projectNameItem">
+                <a class="projectNameInList" href="./project.handlebars">{{this.Project_name}}</a>
+                <h5 class="projectStartDate">{{this.Datetime}}</h5>
+            </li>
         {{/each}}
-    </ul>
-    <div class="card-footer text-muted"></div>
+        </ul>
+        <a class="projectNameInList" href="./project">{{this.Project_name}}Testing the link for handlebars insertion. This will be deleted.</a>
+    </div>
 </div>

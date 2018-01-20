@@ -216,7 +216,36 @@
 
 /* user's projects list */
 .card {
-    width: 1000px;
+    width: 700px;
     margin: 0 auto;
     font-family: 'Arimo', sans-serif;     
+}
+
+#projectListPanelHeader {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 30px;
+    text-align: center;        
+}
+
+#projectListPanelBody {
+    background-color: #eeeeee;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;     
+}
+
+.projectNameInList {
+    display: inline-block;
+    width: 260px;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;
+    font-size: .8em;
+}
+
+.projectStartDate {
+    display: inline-block;
+    width: 260px;    
+    color: #424242;
+    font-family: 'Arimo', sans-serif; 
 }
