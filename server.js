@@ -29,7 +29,7 @@ require("./routes/htmlroutes")(app);
 
 // Start the app
 
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({}).then(function() {
     app.listen(PORT, function() {
         console.log("APP is listening on Port: " + PORT);
     });
