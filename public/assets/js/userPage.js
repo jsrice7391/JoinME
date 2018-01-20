@@ -11,13 +11,15 @@ $(document).ready(function () {
         $('#submitModalBtn').click(function (e) {
             e.preventDefault();
             alert($('#projectName').val());
-    
-            // $.post('http://path/to/post',
-            //     $('#newProjectForm').serialize(),
-            //     function (data, status, xhr) {
-            //         // do something here with response;
-            //     });
-    
+
+            // Submits a new project and brings user to seacrh page upon completion
+  
+    $.post("/api/projects",
+        $('#newProjectForm').serialize(),
+            function (data, status, xhr) {
+      href = "/searchProjects";
+    });
+
         });
     });
     

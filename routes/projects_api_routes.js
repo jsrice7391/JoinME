@@ -10,8 +10,19 @@ module.exports = function(app) {
       app.get("/api/projects", function(req, res) {
         db.Project.findAll({}).then(function(results) {
             res.json(results);
+            // res.render("/project", result);
         })
     });
+
+    // GET route for getting all burgers
+//  router.get("/", function(req, res) {
+//   burger.selectAll(function(data) {
+//       var hbsObject = {
+//           burgers: data
+//       };
+//       res.render("index", hbsObject);
+//   });
+// });
 
     // GET route for getting all of the posts
   // app.get("/api/posts", function(req, res) {
@@ -35,7 +46,7 @@ module.exports = function(app) {
             Project_name: req.body.Project_name,
             Project_type: req.body.Project_type,
             Project_descripton: req.body.Project_descripton,
-            UserId: user.userID
+            UserId: req.body.userId
         }).then(function(results) {
             //   
             console.log("This project was created.");
