@@ -23,6 +23,11 @@ module.exports = function (app) {
     res.render("index");
   });
 
+  // load the search page for all projects
+  app.get("/searchProject", function(req, res) {
+    res.render("searchProject");
+  });
+
    // load the project page for a user's individual projects
    app.get("/project", function(req, res) {
     res.render("project");
