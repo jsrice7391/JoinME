@@ -71,28 +71,12 @@ $(document).ready(function () {
     console.log(error);
   });
 
-//   //Handle Account Status
+//Handle Account Status
 firebase.auth().onAuthStateChanged(user => {
   if(user) {
-    window.location = "/index"; //After successful login, user will be redirected to home.html
+    window.location = "/index"; //After successful login, user will be redirected to index.html as long as they are logged in
   }
 });
-
-  // sign out function w/ error handling.
-  $("#btnSignOut").on("click", function () {
-    alert("btn worked");
-    function signOut() {
-      firebase.auth().signOut().then(function () {
-        // Sign-out successful.
-        alert("signed out");
-      }).catch(function (error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
-      });
-    }
-  });
 
   //end document.ready
   // module.exports = sendUser
