@@ -12,7 +12,19 @@ module.exports = function(app) {
             res.json(results);
         })
     });
-     
+
+    // GET route for getting all of the posts
+  // app.get("/api/posts", function(req, res) {
+  //   var query = {};
+  //   if (req.query.author_id) {
+  //     query.AuthorId = req.query.author_id;
+  //   }
+  //   db.Post.findAll({
+  //     where: query
+  //   }).then(function(dbPost) {
+  //     res.json(dbPost);
+  //   });
+  // });     
 
     //create a project
     //note that description is misspelled in model
