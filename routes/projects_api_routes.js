@@ -1,5 +1,7 @@
 var db = require("../models");
 var path = require("path");
+// var testing = require("../routes/testing.js");
+
 
 module.exports = function(app) {
     
@@ -21,7 +23,7 @@ module.exports = function(app) {
             Project_name: req.body.Project_name,
             Project_type: req.body.Project_type,
             Project_descripton: req.body.Project_descripton,
-            UserId: req.body.UserId
+            UserId: user.userID
         }).then(function(results) {
             //   
             console.log("This project was created.");
