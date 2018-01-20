@@ -1,15 +1,16 @@
 {{!-- user projects table --}}
+<h1>Route worked. This will be deleted.</h1>
+
 <div class="card">
-    <div class="card-header">{{this.projectName}}</div>
+    <div class="card-header">{{Project.Project_Name}}</div>
 
     <table style="width:100%">
         <tr>
-            {{#each this.step}}
-            <th>{{this.step}}</th>
-            <th>{{this.complete}}</th>
+            {{#each Step.Step}}
+            <th>{{this.Step}}</th>
+            <th>{{this.Step_description}}</th>
+            <th>{{this.Completed}}</th>
             {{/each}}
         </tr>
-   
     </table>
-    <div class="card-footer text-muted"></div>
 </div>
