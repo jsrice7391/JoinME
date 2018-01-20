@@ -1,8 +1,8 @@
 var expect = require("chai").expect;
 const testing = require("../routes/testing.js");
 
-describe("Multiply", function() {
-    it("should multiply properly when passed numbers", function() {
+describe("Post user", function() {
+    it("user entry to populate", function() {
         expect(testing.multiply(2, 4)).to.equal(8);
     });
 
@@ -21,8 +21,8 @@ describe("CreateNewProjectButton", function() {
     }
 })
 
-describe("post user from login", function() {
-    it("should post a user to the user table by sending the user data from the google auth user object"), function() {
+describe("Post user to user table", function() {
+    it("it should post user to user database"), function() {
         expect(function() {
             userPostWorked
         })
