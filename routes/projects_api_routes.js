@@ -26,7 +26,21 @@ module.exports = function(app) {
             //   
             console.log("This project was created.");
         });
+
+
     });
     
+    app.delete("/api/projects/:id", function(req, res) {
+        // Delete the Project with id from req.body.id
+        db.Project.destroy({
+          where: {
+            id: req.body.id
+          }
+        }).then(function(results) {
+          res.json(results);
+          console.log ("project deleted.")
+        });
+      });
+
 
     };
