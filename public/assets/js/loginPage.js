@@ -71,6 +71,13 @@ $(document).ready(function () {
     console.log(error);
   });
 
+//   //Handle Account Status
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    window.location = "/index"; //After successful login, user will be redirected to home.html
+  }
+});
+
   // sign out function w/ error handling.
   $("#btnSignOut").on("click", function () {
     alert("btn worked");
