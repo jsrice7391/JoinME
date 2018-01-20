@@ -17,9 +17,9 @@ module.exports = function(app) {
     app.post("/api/users", function(req, res) {
         console.log(req.body)
         db.User.create({
-            name: req.body.userName,
-            phone: req.body.userPhone,
-            email: req.body.userEmail
+            name: req.body.name,
+            phone: req.body.phone,
+            email: req.body.email
         }).then(function(results) {
             //   
             console.log("That worked");

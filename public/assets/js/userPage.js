@@ -8,7 +8,7 @@ $(document).ready(function () {
             var id = $(this).data("id");
         });
     
-        $('#myFormSubmit').click(function (e) {
+        $('#submitModalBtn').click(function (e) {
             e.preventDefault();
             alert($('#projectName').val());
     

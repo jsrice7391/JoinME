@@ -27,8 +27,6 @@ require("./routes/projects_api_routes")(app);
 require("./routes/user_routes")(app);
 require("./routes/htmlroutes")(app);
 
-
-
 // Start the app
 
 db.sequelize.sync({ force: true }).then(function() {

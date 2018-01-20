@@ -37,19 +37,55 @@ $(document).ready(function () {
       var uid = user.uid;
       var phoneNumber = user.phoneNumber;
       var providerData = user.providerData;
+
       user.getIdToken().then(function (accessToken) {
-        document.getElementById('welcomeUserWithName').textContent = user.displayName;
+
+        document.getElementById('welcomePanelTitle').textContent = user.displayName;
       });
+      var sendUser = {
+        name: displayName,
+        phone: phoneNumber,
+        email: email
+    };
+
+    console.log(sendUser);
+
+      // Send the PUT request.
+      $.ajax("/api/users/", {
+        type: "POST",
+        data: sendUser
+
+      }).then(
+        function (result) {
+          // Reload the page to get the updated list
+          var userPostWorked = result;
+          console.log(userPostWorked);
+          location.reload();
+        }
+        );
     } else {
       // User is signed out.
-      // document.getElementById('sign-in-status').textContent = 'Signed out';
-      // document.getElementById('sign-in').textContent = 'Sign in';
-      // document.getElementById('account-details').textContent = 'null';
+      console.log("User is signed out");
     }
   }, function (error) {
     console.log(error);
   });
 
+  // sign out function w/ error handling.
+  $("#btnSignOut").on("click", function () {
+    alert("btn worked");
+    function signOut() {
+      firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+        alert("signed out");
+      }).catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+      });
+    }
+  });
 
   //end document.ready
 });

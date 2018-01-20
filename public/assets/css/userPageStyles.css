@@ -126,8 +126,8 @@
 }
 
 #projectType {
-    width: 480px;
-    /* margin-left: 40px; */
+    width: 680px;
+    margin-left: 40px;
     margin-right: 40px;
 }
 
@@ -204,9 +204,48 @@
     color: #ffffff;
 }
 
-/* user's projects table */
+.modal-footer {
+    background-color: #222222;
+}
+
+#dismissModalBtn {
+    background-color: #ffffff;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;         
+}
+
+/* user's projects list */
 .card {
-    width: 1000px;
+    width: 700px;
     margin: 0 auto;
     font-family: 'Arimo', sans-serif;     
+}
+
+#projectListPanelHeader {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 30px;
+    text-align: center;        
+}
+
+#projectListPanelBody {
+    background-color: #eeeeee;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;     
+}
+
+.projectNameInList {
+    display: inline-block;
+    width: 260px;
+    color: #424242;
+    font-family: 'Arimo', sans-serif;
+    font-size: .8em;
+}
+
+.projectStartDate {
+    display: inline-block;
+    width: 260px;    
+    color: #424242;
+    font-family: 'Arimo', sans-serif; 
 }

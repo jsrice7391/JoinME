@@ -18,12 +18,17 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
-  // load the index page
+  // load the index/user's home page
   app.get("/index", function(req, res) {
     res.render("index");
   });
 
-  // loads the about page
+   // load the project page for a user's individual projects
+   app.get("/project", function(req, res) {
+    res.render("project");
+  });
+
+  // loads the about this app page
   app.get("/about", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/about.html"));
   });
