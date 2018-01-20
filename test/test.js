@@ -21,3 +21,10 @@ describe("CreateNewProjectButton", function() {
     }
 })
 
+describe("post user from login", function() {
+    it("should post a user to the user table by sending the user data from the google auth user object"), function() {
+        expect(function() {
+            userPostWorked
+        })
+    }
+})

@@ -37,9 +37,32 @@ $(document).ready(function () {
       var uid = user.uid;
       var phoneNumber = user.phoneNumber;
       var providerData = user.providerData;
+
       user.getIdToken().then(function (accessToken) {
+
         document.getElementById('welcomePanelTitle').textContent = user.displayName;
       });
+      var sendUser = {
+        name: displayName,
+        phone: phoneNumber,
+        email: email
+    };
+
+    console.log(sendUser);
+
+      // Send the PUT request.
+      $.ajax("/api/users/", {
+        type: "POST",
+        data: sendUser
+
+      }).then(
+        function (result) {
+          // Reload the page to get the updated list
+          var userPostWorked = result;
+          console.log(userPostWorked);
+          location.reload();
+        }
+        );
     } else {
       // User is signed out.
       console.log("User is signed out");
@@ -62,10 +85,6 @@ $(document).ready(function () {
         var credential = error.credential;
       });
     }
-  });
-
-  $("#testBtn").on("click", function() {
-    alert("button worked");
   });
 
   //end document.ready
