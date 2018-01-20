@@ -38,7 +38,7 @@ $(document).ready(function () {
       var phoneNumber = user.phoneNumber;
       var providerData = user.providerData;
       user.getIdToken().then(function (accessToken) {
-        document.getElementById('welcomeUserWithName').textContent = user.displayName;
+        document.getElementById('welcomePanelTitle').textContent = user.displayName;
       });
     } else {
       // User is signed out.
