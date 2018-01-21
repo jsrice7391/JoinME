@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
+
     Step.associate = function(models) {
         Step.belongsTo(models.Project, {
             onDelete: "CASCADE",
