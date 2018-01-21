@@ -58,9 +58,8 @@ $(document).ready(function() {
             var uid = user.uid;
             var phoneNumber = user.phoneNumber;
             var providerData = user.providerData;
-            current_user = user;
-            user.getIdToken().then(function(accessToken) {
 
+            user.getIdToken().then(function(accessToken) {
                 document.getElementById('welcomePanelTitle').textContent = user.displayName;
             });
             var sendUser = {
