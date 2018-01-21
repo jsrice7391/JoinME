@@ -1,5 +1,4 @@
 $(document).ready(function () {
-<<<<<<< Updated upstream
     
         $("#submitModalBtn").click(function (event) {
     
@@ -22,7 +21,6 @@ $(document).ready(function () {
     });
 
         });
-=======
 
     $("#submitModalBtn").click(function (event) {
 
@@ -30,7 +28,6 @@ $(document).ready(function () {
         event.preventDefault();
 
         var id = $(this).data("id");
->>>>>>> Stashed changes
     });
 
     $('#submitModalBtn').click(function (e) {
