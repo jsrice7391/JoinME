@@ -72,11 +72,11 @@ $(document).ready(function () {
   });
 
 //Handle Account Status
-firebase.auth().onAuthStateChanged(user => {
-  if(user) {
-    window.location = "/index"; //After successful login, user will be redirected to index.html as long as they are logged in
-  }
-});
+// firebase.auth().onAuthStateChanged(user => {
+//   if(user) {
+//     window.location = "/index"; //After successful login, user will be redirected to index.html as long as they are logged in
+//   }
+// });
 
   //end document.ready
   // module.exports = sendUser
