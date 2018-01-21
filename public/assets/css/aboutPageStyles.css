@@ -1,4 +1,8 @@
 /* navbar */
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg");
+}
+
 #joinmeNavbar {
     background-color: #222222;
 }
