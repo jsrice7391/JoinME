@@ -5,7 +5,7 @@ body {
        /* The image used */
        background-image: url("../images/shoestracks.jpeg");
        /* Center and scale the image nicely */
-       /* background-position: center; */
+       background-position: center;
        background-repeat: no-repeat;
        background-size: cover;    
 }
@@ -13,6 +13,12 @@ body {
 .container-fluid {
     background-color:#e3f2fd;
     padding-top: 100px;
+}
+
+.tagline {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
 /* navbar */
