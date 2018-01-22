@@ -4,56 +4,46 @@
 
 // Dependencies
 // =============================================================
-var config = {
-    apiKey: "AIzaSyBtYPFjB-gpNIw8wRKnKao7lKSJ7Rho3bo",
-    authDomain: "joinme-3d32e.firebaseapp.com",
-    databaseURL: "https://joinme-3d32e.firebaseio.com/",
-    projectId: "joinme-3d32e",
-    storageBucket: "gs://joinme-3d32e.appspot.com",
-    messagingSenderId: "302936142479"
-};
-
 var path = require("path");
 var firebase = require('firebase');
-require("firebase/auth");
-require("firebase/database");
-var authenticate = require("../mailers/isAuth.js");
-
-firebase.initializeApp(config)
-
-// firebaseClient.auth().signInWithEmailAndPassword(req.body.email, req.body.password).catch(function(error) {
-//     console.log(error);
-// })
-
-
+// require("firebase/auth");
+// // require("firebase/database");
+// var authenticate = require("../mailers/isAuth.js");
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function(app, passport) {
 
-    // Each of the below routes just handles the HTML page that the user gets sent to.
 
-    // root route loads login.html
-    app.get("/", authenticate.isAuthenticated, function(req, res) {
-        var user = firebase.auth().currentUser;
-        console.log(user);
-        // res.sendFile(path.join(__dirname, "../public/login.html"));
+    // Get the Index page
+    app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
-    // load the index/user's home page
-    app.get("/index", authenticate.signedIn, function(req, res) {
-        // res.render("index");
+    // Go to the login Form
+    app.get("/login", function(req, res) {
+        res.render("login")
+    })
+
+    // Load the sign Up form
+    app.get("/signup", function(req, res) {
+        res.render("signup")
     });
 
-    // admin.auth().verifyIdToken(idToken)
-    //     .then(function(decodedToken) {
-    //         var uid = decodedToken.uid;
-    //         console.log(uid)
-    //             // ...
-    //     }).catch(function(error) {
-    //         // Handle error
-    //     });
-    // console.log(user);
+    app.post("/signup", passport.authenticate("local-signup", {
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/signup', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
+    }));
+
+    app.post("/login", passport.authenticate("local-signup", {
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/login', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
+    }))
+
+
+
 
 
     // load the search page for all projects
@@ -69,5 +59,5 @@ module.exports = function(app) {
     // loads the about this app page
     app.get("/about", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/about.html"));
-    });
+    })
 }
