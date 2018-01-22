@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+       /* The image used */
+       background-image: url("../images/foggymountains.jpg");
+       /* Center and scale the image nicely */
+       /* background-position: center; */
+       background-repeat: no-repeat;
+       background-size: cover;    
+}
+
+.container-fluid {
+    background-color:#e3f2fd;
+    padding-top: 100px;
+}
+
+/* navbar */
+.container {
+    width: 600px;
+    margin-left: 0;
+}
+
+#joinmeNavbar {
+    background-color: #222222;
+}
+
+#joinmeNavLink {
+    color:#E18942;
+    font-weight: bold;    
+    font-family: 'Arimo', sans-serif; 
+    font-size: 24px;       
+}
+
+.nav-link {
+    color: #9e9e9e;
+    font-family: 'Arimo', sans-serif; 
+    font-size: 14px;
+}
+
+#activeNavLink {
+    font-size: 18px;
+    color: #e3f2fd;  
+}
+
+#btnSignOut {
+    position: absolute;
+    right: 40px;
+    background:#E18942;
+    color: #e3f2fd;      
+}
+
+/* footer */
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color: #E18942;
+}
+#footImg {
+    vertical-align: middle;
+}

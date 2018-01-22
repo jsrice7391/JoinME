@@ -1,6 +1,19 @@
-{{!-- user projects table --}}
-<h1>Route worked. This will be deleted.</h1>
+<div class="container-fluid">
+    <h2 class="tagline">Let's accomplish more together</h2>
+</div>
 
+<!--navbar-->
+<nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
+    <div class="container">
+        <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinMe</a>
+        <a class="nav-link" href="/index">Home</a>
+        <a class="nav-link" href="../public/about.html">About</a>
+        <a class="nav-link" href="/searchProject">Search Projects</a>
+        <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+    </div>
+</nav>
+
+{{!-- user projects table --}}
 <div class="card">
     <div class="card-header">{{Project.Project_Name}}</div>
 
@@ -14,3 +27,11 @@
         </tr>
     </table>
 </div>
+
+
+<!--footer-->
+<footer class="fixed-bottom">
+    <div class="mx-auto" id="footImg" style="width: 100px;">
+        <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+    </div>
+</footer>
