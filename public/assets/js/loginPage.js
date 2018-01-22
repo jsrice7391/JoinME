@@ -45,7 +45,8 @@ $(document).ready(function () {
       var sendUser = {
         name: displayName,
         phone: phoneNumber,
-        email: email
+        email: email,
+        uid: uid
     };
 
     console.log(sendUser);
@@ -72,11 +73,12 @@ $(document).ready(function () {
   });
 
 //Handle Account Status
-// firebase.auth().onAuthStateChanged(user => {
-//   if(user) {
-//     window.location = "/index"; //After successful login, user will be redirected to index.html as long as they are logged in
-//   }
-// });
+firebase.auth().onAuthStateChanged(user => {
+  if(user) {
+    //After successful login, user will be redirected to index.html as long as they are logged in
+    window.location = "/index";
+  }
+});
 
   //end document.ready
   // module.exports = sendUser
