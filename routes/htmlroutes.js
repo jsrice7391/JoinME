@@ -4,37 +4,60 @@
 
 // Dependencies
 // =============================================================
-
 var path = require("path");
+var firebase = require('firebase');
+// require("firebase/auth");
+// // require("firebase/database");
+// var authenticate = require("../mailers/isAuth.js");
 
 // Routes
 // =============================================================
-module.exports = function (app) {
+module.exports = function(app, passport) {
 
-  // Each of the below routes just handles the HTML page that the user gets sent to.
 
-  // root route loads login.html
-  app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
-  });
+    // Get the Index page
+    app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/index.html"));
+    });
 
-  // load the index/user's home page
-  app.get("/index", function(req, res) {
-    res.render("index");
-  });
+    // Go to the login Form
+    app.get("/login", function(req, res) {
+        res.render("login")
+    })
 
-  // load the search page for all projects
-  app.get("/searchProject", function(req, res) {
-    res.render("searchProject");
-  });
+    // Load the sign Up form
+    app.get("/signup", function(req, res) {
+        res.render("signup")
+    });
 
-   // load the project page for a user's individual projects
-   app.get("/project", function(req, res) {
-    res.render("project");
-  });
+    app.post("/signup", passport.authenticate("local-signup", {
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/signup', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
+    }));
 
-  // loads the about this app page
-  app.get("/about", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/about.html"));
-  });
+    app.post("/login", passport.authenticate("local-signup", {
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/login', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
+    }))
+
+
+
+
+
+    // load the search page for all projects
+    app.get("/searchProject", function(req, res) {
+        res.render("searchProject");
+    });
+
+    // load the project page for a user's individual projects
+    app.get("/project", function(req, res) {
+        res.render("project");
+    });
+
+    // loads the about this app page
+    app.get("/about", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/about.html"));
+    })
 }
