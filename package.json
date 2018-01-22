@@ -10,6 +10,7 @@
     "author": "Justin Rice <jsrice7391@gmail.com>",
     "license": "ISC",
     "dependencies": {
+        "bcrypt-nodejs": "0.0.3",
         "body-parser": "^1.18.2",
         "connect-flash": "^0.1.1",
         "ejs": "^2.5.7",
@@ -19,7 +20,7 @@
         "firebaseui": "^2.5.1",
         "mysql": "^2.15.0",
         "mysql2": "^1.5.1",
-        "nodemon": "^1.14.7",
+        "nodemon": "^1.14.11",
         "passport": "^0.4.0",
         "passport-facebook": "^2.1.1",
         "passport-local": "^1.0.0",

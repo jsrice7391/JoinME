@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
-var firebase = require('firebase');
+// var firebase = require('firebase');
 // require("firebase/auth");
 // // require("firebase/database");
 // var authenticate = require("../mailers/isAuth.js");
@@ -40,13 +40,15 @@ module.exports = function(app, passport) {
         successRedirect: '/profile', // redirect to the secure profile section
         failureRedirect: '/login', // redirect back to the signup page if there is an error
         failureFlash: true // allow flash messages
-    }))
+    }));
 
 
 
 
 
-    // load the search page for all projects
+
+
+    //  search page for all projects
     app.get("/searchProject", function(req, res) {
         res.render("searchProject");
     });

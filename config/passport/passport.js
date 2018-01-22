@@ -3,19 +3,30 @@
 
 // Here we initialize passports local configuration
 var Local = require("passport-local").Strategy;
+var User = require("../../models/user");
+var bCrypt = require("bcrypt-nodejs");
 
-var User = require("../models/user")
+
 
 module.exports = function(passport) {
+    var Local = require("passport-local").Strategy;
+    var User = require("../../models").User;
+
+
     passport.serializeUser(function(user, done) {
         done(null, user.id);
     });
 
     passport.deserializeUser(function(id, done) {
-        USer.findById(id, function(err, user) {
-            done(err, user)
+        User.findById(id).then(function(user) {
+            if (user) {
+                done(null, user.get());
+            } else {
+                done(user.errors, null);
+            }
         });
-    })
+    });
+
 
     passport.use("local-signin", new Local({
                 usernameField: "email",
@@ -24,6 +35,14 @@ module.exports = function(passport) {
             },
 
             function(req, email, password, done) {
+
+                var generateHash = function(password) {
+
+                    return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
+
+                };
+
+
                 User.findOne({
                     where: {
                         email: email
@@ -53,6 +72,14 @@ module.exports = function(passport) {
             passReqToCallback: true
         },
         function(req, email, password, done) {
+
+            var generateHash = function(password) {
+
+                return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
+
+            };
+
+
             process.nextTick(function() {
 
                 User.findOne({
@@ -65,6 +92,9 @@ module.exports = function(passport) {
                     if (user) {
                         return done(null, false, req.flash('signupMessage', 'That email is already taken.'))
                     } else {
+
+                        var userPassword = generateHash(password);
+
                         var data =
 
                             {
@@ -76,23 +106,19 @@ module.exports = function(passport) {
 
                                 lastname: req.body.lastname,
 
-                                phone: req.body.phone
+                                phone: req.body.phone,
+
+                                name: req.body.name
 
                             };
 
 
                         User.create(data).then(function(newUser, created) {
-
                             if (!newUser) {
-
                                 return done(null, false);
-
                             }
-
                             if (newUser) {
-
                                 return done(null, newUser);
-
                             }
 
 
