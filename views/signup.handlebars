@@ -9,28 +9,80 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- load fontawesome -->
     <style>
-        body {
+    body {
             padding-top: 200px;
         }
 
         #signupPanel {
             background-color: #e3f2fd;
             border-radius: 5px;
-            font-family: 'Arimo', sans-serif; 
+            font-family: 'Arimo', sans-serif;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            /* Firefox */
+            -webkit-animation: fadein 2s;
+            /* Safari and Chrome */
+            -o-animation: fadein 2s;
+            /* Opera */
         }
 
-        #signupSubmitBtn {
-            background-color: #E18942;
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        p, a, label {
-            font-weight: bold;
-            font-size: 16px;
+        @-moz-keyframes fadein {
+            /* Firefox */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        a {
-            color:#E18942;
+        @-webkit-keyframes fadein {
+            /* Safari and Chrome */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
+
+        @-o-keyframes fadein {
+            /* Opera */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    #signupPanelBody {
+        margin: 0 auto;
+    }
+
+    #signupSubmitBtn {
+        background-color: #E18942;
+    }
+
+    p,
+    a,
+    label {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    a {
+        color: #E18942;
+    }
     </style>
 </head>
 
@@ -38,7 +90,7 @@
 
     <div class="card" id="signupPanel">
 
-        <div class="card-body">
+        <div class="card-body" id="signupPanelBody">
 
             <h1><span class="fa fa-sign-in"></span> Sign Up</h1>
 
