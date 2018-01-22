@@ -1,5 +1,12 @@
-body {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/Moraine_Lake_17092005.jpg");
+body, html {
+    height: 100%;
+    margin: 0;
+       /* The image used */
+       background-image: url("../images/shoes.jpg");
+       /* Center and scale the image nicely */
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
 }
 
 .mt100 {

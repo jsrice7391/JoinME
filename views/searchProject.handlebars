@@ -1,10 +1,14 @@
+<div class="container-fluid"></div>
+
 <!--navbar-->
-<nav class="navbar navbar-expand-lg navbar-light" id="joinmeNavbar">
-    <a class="nav-link" id="joinmeNavLink" href="#">JoinMe</a>
-    <a class="nav-link active" href="/index">Home</a>
+<nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
+    <div class="container">
+    <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinMe</a>
+    <a class="nav-link" href="/index">Home</a>
     <a class="nav-link" href="../public/about.html">About</a>
-      <a class="nav-link" href="/searchProject">Search Projects</a>
+    <a class="nav-link disabled" id="activeNavLink" href="#">Search Projects</a>
     <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+    </div>
 </nav>
 
 {{!-- UNTESTED HANDLEBARS --}}
