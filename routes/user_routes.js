@@ -19,15 +19,12 @@ module.exports = function(app) {
         db.User.create({
             name: req.body.name,
             phone: req.body.phone,
-            email: req.body.email
+            email: req.body.email,
+            uid: req.body.uid
         }).then(function(results) {
             //   
             console.log("That worked");
         });
     });
-
-
-
-
 
 }
