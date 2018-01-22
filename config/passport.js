@@ -24,7 +24,11 @@ module.exports = function(passport) {
             },
 
             function(req, email, password, done) {
-                User.findOne({ "local-email": email }, function(err, user) {
+                User.findOne({
+                    where: {
+                        email: email
+                    }
+                }).then(function(err, user) {
                     if (err)
                         return done(err);
 
@@ -51,23 +55,46 @@ module.exports = function(passport) {
         function(req, email, password, done) {
             process.nextTick(function() {
 
-                User.findOne({ "local.email": email }, function(err, user) {
+                User.findOne({
+                    where: {
+                        email: email
+                    }
+                }).then(function(err, user) {
                     if (err)
                         return done(err)
-
                     if (user) {
                         return done(null, false, req.flash('signupMessage', 'That email is already taken.'))
                     } else {
-                        var newUser = new User();
+                        var data =
 
-                        newUser.email = email;
-                        newUser.password = newUser.generateHash(password);
+                            {
+                                email: email,
 
-                        newUser.save(function(err) {
-                            if (err)
-                                throw err;
+                                password: userPassword,
 
-                            return done(null, newUser);
+                                firstname: req.body.firstname,
+
+                                lastname: req.body.lastname,
+
+                                phone: req.body.phone
+
+                            };
+
+
+                        User.create(data).then(function(newUser, created) {
+
+                            if (!newUser) {
+
+                                return done(null, false);
+
+                            }
+
+                            if (newUser) {
+
+                                return done(null, newUser);
+
+                            }
+
 
                         })
                     }
