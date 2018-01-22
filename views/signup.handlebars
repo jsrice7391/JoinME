@@ -10,23 +10,41 @@
     <!-- load fontawesome -->
     <style>
         body {
-            padding-top: 80px;
+            padding-top: 200px;
+        }
+
+        #signupPanel {
+            background-color: #e3f2fd;
+            border-radius: 5px;
+            font-family: 'Arimo', sans-serif; 
+        }
+
+        #signupSubmitBtn {
+            background-color: #E18942;
+        }
+
+        p, a, label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        a {
+            color:#E18942;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
 
-        <div class="col-sm-6 col-sm-offset-3">
+    <div class="card" id="signupPanel">
 
-            <h1><span class="fa fa-sign-in"></span> Signup</h1>
+        <div class="card-body">
+
+            <h1><span class="fa fa-sign-in"></span> Sign Up</h1>
 
             <!-- show any messages that come back with authentication -->
 
-            <div class="alert alert-danger">
-
-            </div>
+            <div class="alert alert-danger"></div>
 
 
             <!-- LOGIN FORM -->
@@ -40,7 +58,7 @@
                     <input type="password" class="form-control" name="password">
                 </div>
 
-                <button type="submit" class="btn btn-warning btn-lg">Signup</button>
+                <button type="submit" class="btn btn-warning btn-lg" id="signupSubmitBtn">Sign Up</button>
             </form>
 
             <hr>
