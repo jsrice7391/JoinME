@@ -37,9 +37,7 @@ module.exports = function(passport) {
             function(req, email, password, done) {
 
                 var generateHash = function(password) {
-
                     return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
-
                 };
 
 
@@ -52,11 +50,11 @@ module.exports = function(passport) {
                         return done(err);
 
                     if (!user) {
-                        return done(null, false, req.flash("login-message", "No user found"));
+                        return done(null, false, { message: "That user does not exist" });
                     }
 
                     if (!user.validPassword(password)) {
-                        return done(null, false, req.flash("login-message", "Oops Wrong password!"))
+                        return done(null, false, { message: "That is not the correct password" })
                     }
 
                     return done(null, user);
