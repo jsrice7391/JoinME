@@ -9,32 +9,80 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- load fontawesome -->
     <style>
-        body {
+    body {
             padding-top: 200px;
         }
 
         #signupPanel {
             background-color: #e3f2fd;
             border-radius: 5px;
-            font-family: 'Arimo', sans-serif; 
+            font-family: 'Arimo', sans-serif;
+            animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            /* Firefox */
+            -webkit-animation: fadein 2s;
+            /* Safari and Chrome */
+            -o-animation: fadein 2s;
+            /* Opera */
         }
 
-        #signupPanelBody {
-            margin: 0 auto;
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        #signupSubmitBtn {
-            background-color: #E18942;
+        @-moz-keyframes fadein {
+            /* Firefox */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        p, a, label {
-            font-weight: bold;
-            font-size: 16px;
+        @-webkit-keyframes fadein {
+            /* Safari and Chrome */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        a {
-            color:#E18942;
+        @-o-keyframes fadein {
+            /* Opera */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
+
+    #signupPanelBody {
+        margin: 0 auto;
+    }
+
+    #signupSubmitBtn {
+        background-color: #E18942;
+    }
+
+    p,
+    a,
+    label {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    a {
+        color: #E18942;
+    }
     </style>
 </head>
 
