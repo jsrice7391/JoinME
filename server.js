@@ -42,8 +42,10 @@ require("./routes/htmlroutes")(app, passport);
 require('./routes/authRoutes.js')(app, passport);
 
 // Start the app
-db.sequelize.sync({ force: true }).then(function() {
-    app.listen(PORT, function() {
-        console.log("APP is listening on Port: " + PORT);
+app.listen(PORT, function() {
+    console.log("APP is listening on Port: " + PORT);
+    
+db.sequelize.sync({}).then(function() {
     });
+
 })
