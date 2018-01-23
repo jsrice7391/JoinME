@@ -297,6 +297,21 @@ body, html {
     font-family: 'Arimo', sans-serif;     
 }
 
+#projectListHeadersInList {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;    
+}
+
+#projectListH3 {
+    display: inline-block;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-weight: bold;    
+    font-family: 'Arimo', sans-serif;    
+}
+
 .projectNameInList {
     display: inline-block;
     width: 260px;
@@ -311,6 +326,16 @@ body, html {
     color: #424242;
     font-family: 'Arimo', sans-serif; 
 }
+
+h5 {
+    display: inline-block;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+}
+
+
 
 /* footer */
 footer {
