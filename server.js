@@ -39,11 +39,10 @@ require("./routes/user_routes")(app, passport);
 require("./routes/htmlroutes")(app, passport);
 
 // Start the app
-
+app.listen(PORT, function() {
+    console.log("APP is listening on Port: " + PORT);
+    
 db.sequelize.sync({}).then(function() {
-    app.listen(PORT, function() {
-        console.log("APP is listening on Port: " + PORT);
     });
-
 
 })
