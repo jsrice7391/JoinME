@@ -6,18 +6,17 @@
 <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
     <div class="container">
         <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-        <a class="nav-link" href="/index">Home</a>
+        <a class="nav-link" href="/user">Home</a>
         <a class="nav-link" href="../public/about.html">About</a>
         <a class="nav-link" href="/searchProject">Search Projects</a>
         <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
     </div>
 </nav>
 
-{{!-- user projects table --}}
-<div class="card">
-    <div class="card-header">{{Project.Project_Name}}</div>
-
-    <table style="width:100%">
+{{!-- user project table --}} {{!--
+<div class="card" id="projectPanel">
+    <div class="card-header" id="projectPanelHeader">Emma's project{{Project.Project_Name}}</div> --}} {{!--
+    <table>
         <tr>
             {{#each Step.Step}}
             <th>{{this.Step}}</th>
@@ -25,7 +24,30 @@
             <th>{{this.Completed}}</th>
             {{/each}}
         </tr>
-    </table>
+    </table> --}}
+{{!-- </div> --}}
+
+<div class="card" id="projectPanel">
+    <div class="card-header" id="projectPanelHeader">Emma's project{{Project.Project_Name}}</div>
+<table class="projectPanelTable" border="1">
+    <tbody class="projectPanelTableBody">
+    <tr>
+        <th class="projectTableHeaders">Step One</th>
+        <th class="projectTableHeaders">Step one description here</th>
+        <th class="projectTableHeaders">Completed</th>
+    </tr>
+      <tr>
+        <th class="projectTableHeaders">Step Two</th>
+        <th class="projectTableHeaders">Step two description is kind of long but that's ok becuase this table header will adjust size</th>
+        <th class="projectTableHeaders">Incomplete</th>
+    </tr>
+      <tr>
+        <th class="projectTableHeaders">Step Three</th>
+        <th class="projectTableHeaders">Step three description here</th>
+        <th class="projectTableHeaders">Incomplete</th>
+    </tr>
+    </tbody>
+</table>
 </div>
 
 

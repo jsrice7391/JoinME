@@ -18,11 +18,6 @@ body, html {
       background-color: #e3f2fd;
 }
 
-/* body { */
-    /* Margin bottom by footer height */
-    /* padding-bottom: 100px; */
-/* } */
-
 .container-fluid {
     background-color:#e3f2fd;
     padding-top: 100px;
