@@ -9,21 +9,21 @@
         <a class="nav-link disabled" id="activeNavLink" href="#">Home</a>
         <a class="nav-link" href="../public/about.html">About</a>
         <a class="nav-link" href="/searchProject">Search Projects</a>
-        <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+        <a class="btn btn-default navbar-btn" id="btnSignOut" href="/logout">Sign Out</a>
     </div>
 </nav>
 
 {{!-- welcome panel --}}
 <div class="card" id="welcomePanel">
     <div class="card-body" id="welcomePanelBody">
-        <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
+        <h5 class="card-title" id="welcomePanelTitle">Hello, {{user.name}}</h5>
         <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
             for existing projects to join in on.
         </h6>
 
         <div class="input-group" id="welcomePanelInputGroup">
-            <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>            {{!-- <input type="text" class="form-control" id="projectSearchInput" placeholder="Search for Projects"></input>
-            --}}
+            <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button> 
+
             <div class="input-group-append">
                 <span class="glyphicon glyphicon-search"></span>
             </div>

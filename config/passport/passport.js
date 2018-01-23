@@ -40,7 +40,6 @@ module.exports = function(passport) {
                     return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
                 };
 
-
                 User.findOne({
                     where: {
                         email: email
@@ -100,13 +99,10 @@ module.exports = function(passport) {
 
                                 password: userPassword,
 
-                                firstname: req.body.firstname,
-
-                                lastname: req.body.lastname,
+                                name: req.body.name,
 
                                 phone: req.body.phone,
 
-                                name: req.body.name
 
                             };
 
