@@ -2,12 +2,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-       /* The image used */
-       background-image: url("../images/foggymountains.jpg");
-       /* Center and scale the image nicely */
-       /* background-position: center; */
-       background-repeat: no-repeat;
-       background-size: cover;    
+    background-color: #e3f2fd;
 }
 
 .container-fluid {

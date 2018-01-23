@@ -4,6 +4,7 @@
             <h2 class="tagline">Let's accomplish more together</h2>
         </div>
 
+        {{!-- navbar --}}
         <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
             <div class="container">
                 <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
@@ -14,6 +15,7 @@
             </div>
         </nav>
 
+        {{!-- welcome panel --}}
         <div class="card" id="welcomePanel">
             <div class="card-body" id="welcomePanelBody">
                 <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
@@ -24,15 +26,14 @@
                 <div id="welcomePanelBtnGroup">
                     <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
                     <a class="btn btn-primary" id="projectSearchBtn" href="/searchProject">Search Projects</a>
-                    <!-- <div class="input-group-append"> -->
-                    <!-- <span class="glyphicon glyphicon-search"></span> -->
                 </div>
             </div>
         </div>
 
-    <!-- close image div -->
+    {{!-- close image div --}}
     </div>
 
+    {{!-- create project modal --}}
     <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -141,7 +142,7 @@
         </div>
     </div>
 
-    <!--footer-->
+    {{!-- footer --}}
     <footer class="fixed-bottom">
         <div class="mx-auto" id="footImg" style="width: 100px;">
             <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">

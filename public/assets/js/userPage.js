@@ -34,6 +34,10 @@ $(document).ready(function () {
         }
     });
 
+    // $("#projectSearchBtn").on("click", function () {
+
+    // })
+
 
     // DELETE THIS?
     // var navbar = $("#navbarUserPage");
