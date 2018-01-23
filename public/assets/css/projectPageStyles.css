@@ -47,7 +47,8 @@ body {
     position: absolute;
     right: 40px;
     background:#E18942;
-    color: #e3f2fd;      
+    color: #e3f2fd;
+    font-family: 'Arimo', sans-serif;     
 }
 
 /* footer */
