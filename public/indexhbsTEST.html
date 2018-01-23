@@ -17,36 +17,39 @@
 
 <body>
 
-    <div class="container-fluid">
-        <h2 class="tagline">Let's accomplish more together</h2>
-    </div>
+    <div class="imageDiv">
 
-    <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
-        <div class="container">
-            <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-            <a class="nav-link disabled" id="activeNavLink" href="#">Home</a>
-            <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" href="/searchProject">Search Projects</a>
-            <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+        <div class="container-fluid">
+            <h2 class="tagline">Let's accomplish more together</h2>
         </div>
-    </nav>
 
-    <div class="card" id="welcomePanel">
-        <div class="card-body" id="welcomePanelBody">
-            <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
-            <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
-                our list of existing projects to join in on.
-            </h6>
-
-            <div id="welcomePanelBtnGroup">
-                <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
-                <a class="btn btn-primary" id="projectSearchBtn" href="/searchProject">Search Projects</a>
-                <!-- <div class="input-group-append"> -->
-                    <!-- <span class="glyphicon glyphicon-search"></span> -->
+        <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
+            <div class="container">
+                <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
+                <a class="nav-link disabled" id="activeNavLink" href="#">Home</a>
+                <a class="nav-link" href="../public/about.html">About</a>
+                <a class="nav-link" href="/searchProject">Search Projects</a>
+                <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
             </div>
-          
+        </nav>
 
+        <div class="card" id="welcomePanel">
+            <div class="card-body" id="welcomePanelBody">
+                <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
+                <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also
+                    search our list of existing projects to join in on.
+                </h6>
+
+                <div id="welcomePanelBtnGroup">
+                    <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
+                    <a class="btn btn-primary" id="projectSearchBtn" href="/searchProject">Search Projects</a>
+                    <!-- <div class="input-group-append"> -->
+                    <!-- <span class="glyphicon glyphicon-search"></span> -->
+                </div>
+            </div>
         </div>
+
+    <!-- close image div -->
     </div>
 
     <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -145,33 +148,33 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" id="usersProjectListPanel">
         <div class="card-header" id="projectListPanelHeader">Your JoinME Projects</div>
         <div class="card-body" id="projectListPanelBody">
             <ul class="list-group">
                 <li class="list-group-item" id="projectNameItem">
-                    <a class="projectNameInList" href="./project.handlebars"></a>
-                    <h5 class="projectStartDate"></h5>
+                    <a class="projectNameInList" href="./project">Emma's Dummy Project</a>
+                    <h5 class="projectStartDate">Today</h5>
                 </li>
             </ul>
-            <a class="projectNameInList" href="./project">Testing the link for handlebars insertion. This will be deleted.</a>
         </div>
+    </div>
 
-        <!--footer-->
-        <footer class="fixed-bottom">
-            <div class="mx-auto" id="footImg" style="width: 100px;">
-                <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
-            </div>
-        </footer>
+    <!--footer-->
+    <footer class="fixed-bottom">
+        <div class="mx-auto" id="footImg" style="width: 100px;">
+            <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+        </div>
+    </footer>
 
-        <script src="./assets/js/userPage.js"></script>
+    <script src="./assets/js/userPage.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
