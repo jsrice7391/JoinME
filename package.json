@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "mocha"
+        "test": "mocha",
+        "start": "node server.js"
     },
     "keywords": [],
     "author": "Justin Rice <jsrice7391@gmail.com>",
