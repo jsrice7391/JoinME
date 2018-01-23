@@ -88,6 +88,10 @@ body, html {
     
 }
 
+#welcomePanelBtnGroup {
+    text-align: center;
+}
+
 #createProjectBtn {
     display: inline-block;
     width: 175px;
@@ -104,8 +108,8 @@ body, html {
     font-family: 'Arimo', sans-serif;     
 }
 
-#projectSearchInput {
-    width: 200px;
+#projectSearchBtn {
+    width: 175px;
     margin-top: 20px;
     margin-right: 40px;
     text-align: center;
@@ -156,10 +160,6 @@ body, html {
     margin-left: 40px;
     color: #424242;
     font-size: 18px;
-}
-
-.input-group-prepend {
-    margin-left: 40px;
 }
 
 #projectName {
