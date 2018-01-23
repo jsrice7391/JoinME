@@ -8,10 +8,9 @@ var bCrypt = require("bcrypt-nodejs");
 
 
 
-module.exports = function(passport) {
+module.exports = function(passport, user) {
     var Local = require("passport-local").Strategy;
     var User = require("../../models").User;
-
 
     passport.serializeUser(function(user, done) {
         done(null, user.id);
@@ -27,36 +26,42 @@ module.exports = function(passport) {
         });
     });
 
-
+    // Create a rule for passport tof use when the person logs in
     passport.use("local-signin", new Local({
+                // These are the fields that the user will give us and the way we will handle it is through a callback;
                 usernameField: "email",
                 passwordField: "password",
                 passReqToCallback: true
             },
 
             function(req, email, password, done) {
+                var isValidPassword = function(userpass, password) {
+                    return bCrypt.compareSync(password, userpass);
+                }
 
-                var generateHash = function(password) {
-                    return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
-                };
-
+                // Use the sequelize method to find a person where their email
                 User.findOne({
                     where: {
                         email: email
                     }
                 }).then(function(err, user) {
-                    if (err)
+                    if (err) {
                         return done(err);
-
+                    }
                     if (!user) {
+                        console.log("That user does not exist")
                         return done(null, false, { message: "That user does not exist" });
                     }
 
-                    if (!user.validPassword(password)) {
-                        return done(null, false, { message: "That is not the correct password" })
+                    if (!isValidPassword(user.password, password)) {
+                        return done(null, false, {
+                            message: 'Incorrect password.'
+                        });
                     }
 
-                    return done(null, user);
+                    var userinfo = user.get();
+                    return done(null, userinfo);
+
 
                 })
             })
@@ -69,44 +74,37 @@ module.exports = function(passport) {
             passReqToCallback: true
         },
         function(req, email, password, done) {
-
+            // Generate a random hash for a password.
             var generateHash = function(password) {
-
                 return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
-
             };
 
-
             process.nextTick(function() {
-
+                // Sequelize find
                 User.findOne({
                     where: {
                         email: email
                     }
                 }).then(function(err, user) {
+                    // If we get an error throw it.
                     if (err)
                         return done(err)
-                    if (user) {
-                        return done(null, false, req.flash('signupMessage', 'That email is already taken.'))
-                    } else {
 
+                    if (user) {
+                        return done(null, false, { message: "This user already exists" })
+                    } else {
+                        // Get the generate hash from above and save it as user password
                         var userPassword = generateHash(password);
 
-                        var data =
+                        // Create the user object to be passed into the create function.
+                        var data = {
+                            email: email,
+                            password: userPassword,
+                            name: req.body.name,
+                            phone: req.body.phone,
+                        };
 
-                            {
-                                email: email,
-
-                                password: userPassword,
-
-                                name: req.body.name,
-
-                                phone: req.body.phone,
-
-
-                            };
-
-
+                        // Create the user above
                         User.create(data).then(function(newUser, created) {
                             if (!newUser) {
                                 return done(null, false);
@@ -114,8 +112,6 @@ module.exports = function(passport) {
                             if (newUser) {
                                 return done(null, newUser);
                             }
-
-
                         })
                     }
                 })
