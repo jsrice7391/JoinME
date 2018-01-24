@@ -1,40 +1,45 @@
-<div class="container-fluid">
-    <h2 class="tagline">Let's accomplish more together</h2>
-</div>
+<div class="searchProjectPageBodyContainer">
 
-{{!-- navbar --}}
-<nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
-    <div class="container">
-        <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-        <a class="nav-link" href="/user">Home</a>
-        <a class="nav-link" href="../public/about.html">About</a>
-        <a class="nav-link disabled" id="activeNavLink" href="#">Search Projects</a>
-        <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+    <div class="container-fluid">
+        <h2 class="tagline">Let's accomplish more together</h2>
     </div>
-</nav>
 
-<div class="instructionsForJoin">
-    <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
+    {{!-- navbar --}}
+    <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
+        <div class="container">
+            <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
+            <a class="nav-link" href="/user">Home</a>
+            <a class="nav-link" href="../public/about.html">About</a>
+            <a class="nav-link disabled" id="activeNavLink" href="#">Search Projects</a>
+            <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="instructionsForJoin">
+        <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
     </span>button to join a project!</h3>
-</div>
-
-{{!-- user projects list --}}
-<div class="card" id="allProjectsPanel">
-    <div class="card-header" id="allProjectsPanelHeader">All JoinME Projects</div>
-    <div class="card-body" id="allProjectsListPanelBody">
-        <ul class="list-group">
-            <li class="list-group-item" id="projectNameItem">
-                <p class="projectNameInAllList">Justin's Dummy Project</p>
-                <p class="projectDescriptionInAllList">This is Justin's super cool project about some of his personal goals that he would like to track through this super cool app.</p>
-                <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
-            </li>
-        </ul>
     </div>
-</div>
 
-{{!-- footer --}}
-<footer class="fixed-bottom">
-    <div class="mx-auto" id="footImg" style="width: 100px;">
-        <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+    {{!-- user projects list --}}
+    <div class="card" id="allProjectsPanel">
+        <div class="card-header" id="allProjectsPanelHeader">All JoinME Projects</div>
+        <div class="card-body" id="allProjectsListPanelBody">
+            <ul class="list-group">
+                <li class="list-group-item" id="projectNameItem">
+                    <p class="projectNameInAllList">Justin's Dummy Project</p>
+                    <p class="projectDescriptionInAllList">This is Justin's super cool project about some of his personal goals that he would like to track through
+                        this super cool app.</p>
+                    <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
+                </li>
+            </ul>
+        </div>
     </div>
-</footer>
+
+    {{!-- footer --}}
+    <footer class="fixed-bottom">
+        <div class="mx-auto" id="footImg" style="width: 100px;">
+            <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+        </div>
+    </footer>
+
+</div>
