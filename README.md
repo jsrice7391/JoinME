@@ -1,3 +1,5 @@
+app can be found at: https://dry-fjord-23187.herokuapp.com/
+
 # JoinMe
 JoinME is a social based project tracking platform for people on the go.  Allowing the user to Enter and track projects/goals,  Share and invite other people,  Search for active projects,  Get notified of user progress.
 ## Getting Started
