@@ -7,18 +7,18 @@
     {{!-- navbar --}}
     <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
         <div class="container">
-            <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-            <a class="nav-link disabled" id="activeNavLink" href="#">Home</a>
+            <a class="nav-link disabled" id="joinmeNavLink" href="/">JoinME</a>
+            <a class="nav-link disabled" id="activeNavLink" href="/">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
             <a class="nav-link" href="/searchProject">Search Projects</a>
-            <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+            <a href="/logout" type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</a>
         </div>
     </nav>
 
     {{!-- welcome panel --}}
     <div class="card" id="welcomePanel">
         <div class="card-body" id="welcomePanelBody">
-            <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
+            <h5 class="card-title" id="welcomePanelTitle">Hello, {{user.name}}</h5>
             <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
                 our list of existing projects to join in on.
             </h6>
