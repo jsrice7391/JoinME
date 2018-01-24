@@ -51,6 +51,70 @@ body {
     color: #e3f2fd;    
 }
 
+.instructionsForJoin {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#joinmeBtnInstructions {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+/* all projects panel */
+#allProjectsPanel {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 75px;
+    margin-bottom: 150px;
+    background-color: #eeeeee;
+    color: #343a40;
+    border-radius: 5px;
+    font-family: 'Arimo', sans-serif;  
+}
+
+#allProjectsPanelHeader {
+    font-size: 30px;
+    text-align: center;
+    background-color: #000000;
+    color: #eeeeee;
+    font-family: 'Arimo', sans-serif;  
+}
+
+.allProjectsListPanelBody {
+    width: 1000px;
+    text-align: center;
+    background-color: #eeeeee;
+    color: #424242;
+}
+
+#projecctNameItem {
+    display: inline-block;
+}
+
+.projectNameInAllList {
+    width: 400px;
+    display: inline-block;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-weight: bold;    
+    font-family: 'Arimo', sans-serif;    
+}
+
+.projectDescriptionInAllList {
+    width: 400px;
+    display: inline-block;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-weight: bold;    
+    font-family: 'Arimo', sans-serif; 
+}
+
+
+
+
+
 /* footer */
 footer {
     position: fixed;

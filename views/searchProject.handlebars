@@ -13,22 +13,24 @@
     </div>
 </nav>
 
-{{!-- UNTESTED HANDLEBARS --}} {{!-- user projects list --}}
-<div class="card">
-    <div class="card-header" id="projectListPanelHeader">All JoinME Projects</div>
-    <div class="card-body" id="projectListPanelBody">
-        <ul class="list-group">
-            {{#each Project}}
-            <li class="list-group-item" id="projectNameItem">
-                <a class="projectNameInList" href="./project.handlebars">{{this.Project_name}}</a>
-                <h5 class="projectStartDate">{{this.Datetime}}</h5>
-            </li>
-            {{/each}}
-        </ul>
-        <a class="projectNameInList" href="/api/projects">{{this.Project_name}}Testing the link for handlebars insertion. This will be deleted.</a>
-    </div>
+<div class="instructionsForJoin">
+    <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
+    </span>button to join a project!</h3>
 </div>
 
+{{!-- user projects list --}}
+<div class="card" id="allProjectsPanel">
+    <div class="card-header" id="allProjectsPanelHeader">All JoinME Projects</div>
+    <div class="card-body" id="allProjectsListPanelBody">
+        <ul class="list-group">
+            <li class="list-group-item" id="projectNameItem">
+                <p class="projectNameInAllList">Justin's Dummy Project</p>
+                <p class="projectDescriptionInAllList">This is Justin's super cool project about some of his personal goals that he would like to track through this super cool app.</p>
+                <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 {{!-- footer --}}
 <footer class="fixed-bottom">
