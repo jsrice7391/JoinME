@@ -11,6 +11,10 @@
             <a class="nav-link disabled" id="activeNavLink" href="/">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
             <a class="nav-link" href="/searchProject">Search Projects</a>
+
+            {{#if user}}
+            <a class="nav-link" href="/index"> Hello {{user.name}}</a>
+            {{/if}}
             <a href="/logout" type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</a>
         </div>
     </nav>
@@ -119,7 +123,7 @@
 
                     <div class="form-group" id="submitFormGroup">
                         <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
-                        <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" href="/api/projects" data-id="{{id}}">submit</button>
+                        <a type="button" class="btn btn-primary" id="submitModalBtn" value="submit" href="/api/projects" data-userId="{{user.id}}">submit</a>
                     </div>
                 </form>
             </div>
