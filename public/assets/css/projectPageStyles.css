@@ -10,6 +10,12 @@ body {
     padding-top: 100px;
 }
 
+.tagline {
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 /* navbar */
 .container {
     width: 600px;
@@ -50,9 +56,8 @@ body {
 #projectPanelHeader {
     font-size: 30px;
     text-align: center;
-    background-color: #343a40;
-    color: #E18942;
-    font-weight: bold;
+    background-color: #000000;
+    color: #eeeeee;
     font-family: 'Arimo', sans-serif;        
 }
 
