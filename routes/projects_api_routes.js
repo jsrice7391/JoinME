@@ -14,32 +14,14 @@ module.exports = function(app) {
         })
     });
 
-    // GET route for getting all burgers
-//  router.get("/", function(req, res) {
-//   burger.selectAll(function(data) {
-//       var hbsObject = {
-//           burgers: data
-//       };
-//       res.render("index", hbsObject);
-//   });
-// });
+    
+    // {"Project_name": "Obi Wan Kenobi",
+    // "Project_type": "Social",
+    // "Project_descripton": "weight loss",
+    // "userId": "1"
+    // }
 
-    // GET route for getting all of the posts
-  // app.get("/api/posts", function(req, res) {
-  //   var query = {};
-  //   if (req.query.author_id) {
-  //     query.AuthorId = req.query.author_id;
-  //   }
-  //   db.Post.findAll({
-  //     where: query
-  //   }).then(function(dbPost) {
-  //     res.json(dbPost);
-  //   });
-  // });     
-
-    //create a project
-    //note that description is misspelled in model
-
+    //can create project as long as there is a user in user table 
       app.post("/api/projects", function(req, res) {
         console.log(req.body)
         db.Project.create({
