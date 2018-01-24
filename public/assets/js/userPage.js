@@ -167,13 +167,6 @@ console.log(stepOneDetail.Step + " is the first step.")
 
             }
         );
-
-        // Submits a new project and brings user to seacrh page upon completion
-        // $.post("/api/projects",
-        //     $('#newProjectForm').serialize(),
-        //     function (data, status, xhr) {
-        //         href = "/searchProjects";
-        //     });
     });
 
     // Sign out function w/ error handling.
