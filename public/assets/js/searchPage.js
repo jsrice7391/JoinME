@@ -6,11 +6,12 @@ $(document).ready(function () {
             event.preventDefault();
     
             var id = $(this).data("id");
+            console.log(id + " is the id")
         });
     
         $('#submitModalBtn').click(function (e) {
             e.preventDefault();
-            alert($('#projectName').val());
+            
     
             // $.post('http://path/to/post',
             //     $('#newProjectForm').serialize(),

@@ -1,5 +1,6 @@
 var db = require("../models");
 var path = require("path");
+var projects = {}
 // var testing = require("../routes/testing.js");
 
 
@@ -10,6 +11,8 @@ module.exports = function(app) {
       app.get("/api/projects", function(req, res) {
         db.Project.findAll({}).then(function(results) {
             res.json(results);
+            projects = results;
+            console.log(projects);
             // res.render("/project", result);
         })
     });
@@ -23,7 +26,6 @@ module.exports = function(app) {
 
     //can create project as long as there is a user in user table 
       app.post("/api/projects", function(req, res) {
-        console.log(req.body)
         db.Project.create({
             Project_name: req.body.Project_name,
             Project_type: req.body.Project_type,
