@@ -22,7 +22,6 @@ app.use("/public", express.static("public"));
 app.use(express.static("public"));
 
 var model = require("./models")
-console.log(model)
     // required for passport
 require('./config/passport/passport')(passport, model.User); // pass passport for configuration
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
@@ -38,15 +37,14 @@ app.set("view engine", "handlebars");
 // Create some routers
 
 require("./routes/projects_api_routes")(app, passport);
-require("./routes/user_routes")(app, passport);
 require("./routes/htmlroutes")(app, passport);
 require('./routes/authRoutes.js')(app, passport);
 
 // Start the app
 
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({ force: true }).then(function() {
     app.listen(PORT, function() {
         console.log("APP is listening on Port: " + PORT);
     });
-})
+});
