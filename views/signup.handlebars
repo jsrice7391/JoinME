@@ -9,11 +9,27 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- load fontawesome -->
     <style>
-    body {
-            padding-top: 200px;
+        body {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            margin: 0 auto;
+            /* The image used */
+            background-image: url("./assets/images/foggymountains.jpg");
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
         }
 
         #signupPanel {
+            width: 700px;
+            margin: 0 auto;
+            margin-top: 100px;
             background-color: #e3f2fd;
             border-radius: 5px;
             font-family: 'Arimo', sans-serif;
@@ -65,28 +81,42 @@
             }
         }
 
-    #signupPanelBody {
-        margin: 0 auto;
-    }
+        #signupPanelBody {
+            margin: 0 auto;
+        }
 
-    #signupSubmitBtn {
-        background-color: #E18942;
-    }
+        #signupSubmitBtn {
+            background-color: #E18942;
+        }
 
-    p,
-    a,
-    label {
-        font-weight: bold;
-        font-size: 16px;
-    }
+        p,
+        a,
+        label {
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-    a {
-        color: #E18942;
-    }
+        a {
+            color: #E18942;
+        }
+
+        footer {
+            position: fixed;
+            height: 100px;
+            bottom: 0;
+            width: 100%;
+            background-color: #E18942;
+        }
+
+        #footImg {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 <body>
+
+
 
     <div class="card" id="signupPanel">
 
@@ -105,28 +135,28 @@
             <form action="/signup" method="post">
                 <div class="form-group">
 
-                        <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" class="form-control" name="name">
-                        </div>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
 
-         
+
                     <div class="form-group">
                         <label>Phone</label>
                         <input type="text" class="form-control" name="phone">
                     </div>
 
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" class="form-control" name="email">
-                </div>
-                <br/>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" name="password">
-                </div>
-                <br/>
-                <button type="submit" class="btn btn-warning btn-lg" id="signupSubmitBtn">Sign Up</button>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="email">
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-warning btn-lg" id="signupSubmitBtn">Sign Up</button>
             </form>
 
             <hr>
@@ -134,9 +164,16 @@
             <p>Already have an account? <a href="/login">Login</a></p>
             <p>Or go <a href="/">home</a>.</p>
 
+            </div>
+
         </div>
 
-    </div>
+        {{!-- footer --}}
+        <footer class="fixed-bottom">
+            <div class="mx-auto" id="footImg" style="width: 100px;">
+                <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+            </div>
+        </footer>
 </body>
 
 </html>
