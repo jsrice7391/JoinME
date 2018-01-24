@@ -12,8 +12,9 @@ module.exports = function(app) {
             res.json(results);
             // res.render("/project", result);
         });
-
     });
+
+
 
     //can create project as long as there is a user in user table 
     app.post("/api/projects", function(req, res) {
