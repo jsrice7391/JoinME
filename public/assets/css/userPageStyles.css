@@ -12,10 +12,10 @@
        -moz-background-size: cover; 
 }
 
-body, html {
+.bodyContainer {
     height: 100%;
     margin: 0 auto;
-      background-color: #e3f2fd;
+    background-color: #e3f2fd;
 }
 
 .container-fluid {
