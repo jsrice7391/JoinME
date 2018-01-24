@@ -48,6 +48,7 @@ module.exports = function(app, passport) {
     });
 
     //  Get the search page for all projects
+
     app.get("/searchProject", function(req, res) {
         res.render("searchProject");
     });

@@ -21,9 +21,10 @@ app.use(bodyParser.json());
 app.use("/public", express.static("public"));
 app.use(express.static("public"));
 
-
-// required for passport
-require('./config/passport/passport')(passport); // pass passport for configuration
+var model = require("./models")
+console.log(model)
+    // required for passport
+require('./config/passport/passport')(passport, model.User); // pass passport for configuration
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -42,10 +43,10 @@ require("./routes/htmlroutes")(app, passport);
 require('./routes/authRoutes.js')(app, passport);
 
 // Start the app
-app.listen(PORT, function() {
-    console.log("APP is listening on Port: " + PORT);
-    
-db.sequelize.sync({}).then(function() {
-    });
 
+
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log("APP is listening on Port: " + PORT);
+    });
 })
