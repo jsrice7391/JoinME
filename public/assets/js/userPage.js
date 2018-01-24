@@ -1,3 +1,5 @@
+var allProjects = {};
+
 $(document).ready(function () {
 
     console.log("this was loaded.")
@@ -187,8 +189,28 @@ console.log(stepOneDetail.Step + " is the first step.")
         }
     });
 
-    // $("#projectSearchBtn").on("click", function () {
+    $("#projectSearchBtn").on("click", function () {
+        
+        // console.log("clicked search proj.")
+        //     $.ajax({
+        //       url: "/api/projects",
+        //       method: "GET"
+        //     }).done(function(response) {
+        //       allProjects = response;
+        //         console.log(allProjects);
+        //       console.log("the search project button was clicked.")
+            
+        //         $(location).attr('href', "/searchProject");
 
+            });
+
+              //we need to redirect to /searchProject here
+              //i've disabled it because the redirect happened
+              //before results could be returned
+          
+            
+
+            
     // })
 
 

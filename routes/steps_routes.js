@@ -34,7 +34,7 @@ module.exports = function (app) {
 
 
     //this route updates a step based on id to show completed as true.
-    
+
     app.put("/api/steps/:id", function (req, res) {
         db.Step.update(
            {Completed: true},
@@ -48,8 +48,6 @@ module.exports = function (app) {
             });
     });
     
-    // { Completed: true },
-    // { where: { _id: 1 } }
 
     app.delete("/api/steps/:id", function (req, res) {
         // Delete the Step with id from req.body.id

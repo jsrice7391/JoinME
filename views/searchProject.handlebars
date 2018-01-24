@@ -15,28 +15,12 @@
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
-<script>
-
-
-//get all projects
-
-
-
-$.getJSON('/api/projects', function(results) {
-    console.log(projects);
- 
-});
-
-   
-console.log(projects + " is the list of projects.")
-
-
-</script>
 
     <div class="instructionsForJoin">
         <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
     </span>button to join a project!</h3>
     </div>
+
 
     {{!-- user projects list --}}
     <div class="card" id="allProjectsPanel">
@@ -60,4 +44,18 @@ console.log(projects + " is the list of projects.")
         </div>
     </footer>
 
+
+<script>
+    console.log("clicked search proj.")
+            $.ajax({
+              url: "/api/projects",
+              method: "GET"
+            }).done(function(response) {
+              allProjects = response;
+                console.log(allProjects);
+              console.log("the search project button was clicked.")
+
+                
+            });
+            </script>
 </div>
