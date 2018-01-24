@@ -11,15 +11,9 @@ module.exports = function(app) {
         db.Project.findAll({}).then(function(results) {
             res.json(results);
             // res.render("/project", result);
-        })
+        });
+
     });
-
-
-    // {"Project_name": "Obi Wan Kenobi",
-    // "Project_type": "Social",
-    // "Project_descripton": "weight loss",
-    // "userId": "1"
-    // }
 
     //can create project as long as there is a user in user table 
     app.post("/api/projects", function(req, res) {
