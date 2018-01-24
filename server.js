@@ -38,14 +38,15 @@ app.set("view engine", "handlebars");
 // Create some routers
 
 require("./routes/projects_api_routes")(app, passport);
-require("./routes/user_routes")(app, passport);
+// require("./routes/user_routes")(app, passport);
 require("./routes/htmlroutes")(app, passport);
 require('./routes/authRoutes.js')(app, passport);
-
+require('./routes/steps_routes.js')(app, passport);
 // Start the app
 
+//{force:true} will drop table
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force:true}).then(function() {
     app.listen(PORT, function() {
         console.log("APP is listening on Port: " + PORT);
     });
