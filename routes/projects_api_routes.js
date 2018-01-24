@@ -8,7 +8,6 @@ module.exports = function(app) {
     //get all projects
 
     app.get("/api/projects/:type", function(req, res) {
-        console.log(req.params.type)
         db.Project.findAll({
             where: {
                 Project_Type: req.params.type
