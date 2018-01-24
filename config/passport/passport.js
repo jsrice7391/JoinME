@@ -9,8 +9,11 @@ var bCrypt = require("bcrypt-nodejs");
 
 
 module.exports = function(passport, user) {
-    var Local = require("passport-local").Strategy;
-    var User = require("../../models").User;
+
+
+    var User = user;
+
+
 
     passport.serializeUser(function(user, done) {
         done(null, user.id);
@@ -33,35 +36,44 @@ module.exports = function(passport, user) {
                 passwordField: "password",
                 passReqToCallback: true
             },
-
             function(req, email, password, done) {
+
+                var User = user;
+
                 var isValidPassword = function(userpass, password) {
+
                     return bCrypt.compareSync(password, userpass);
+
                 }
 
-                // Use the sequelize method to find a person where their email
                 User.findOne({
                     where: {
                         email: email
                     }
-                }).then(function(err, user) {
-                    if (err) {
-                        return done(err);
-                    }
+                }).then(function(user) {
+
                     if (!user) {
-                        console.log("That user does not exist")
-                        return done(null, false, { message: "That user does not exist" });
+
+                        return done(null, false, {
+                            message: 'Email does not exist'
+                        });
+
                     }
 
                     if (!isValidPassword(user.password, password)) {
+
                         return done(null, false, {
                             message: 'Incorrect password.'
                         });
+
                     }
+
 
                     var userinfo = user.get();
                     return done(null, userinfo);
 
+                }).catch(function(err) {
+                    console.log(err);
 
                 })
             })
@@ -87,6 +99,8 @@ module.exports = function(passport, user) {
                     }
                 }).then(function(err, user) {
                     // If we get an error throw it.
+                    console.log("This is the user " + user)
+
                     if (err)
                         return done(err)
 
