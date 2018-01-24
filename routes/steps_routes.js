@@ -19,14 +19,13 @@ module.exports = function (app) {
     //note that description is misspelled in model
 
     app.post("/api/steps", function (req, res) {
-
         db.Step.create({
             ProjectId: req.body.ProjectId,
             Step: req.body.Step,
             Step_description: req.body.Step_description,
             Completed: req.body.Completed,
         }).then(function (results) {
-            //   
+            //  
             console.log("created step.");
         }); 
         

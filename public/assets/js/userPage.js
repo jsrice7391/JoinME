@@ -72,13 +72,13 @@ $(document).ready(function () {
         //but will be done within a loop to post all the steps to a project
 
         var stepDetail = {
-            ProjectId: ProjectId,
             Step: sendProjectSteps.stepOne,
             Step_description: sendProjectSteps.stepOneDescription,
+            ProjectId: ProjectId,
             Completed: false
         }
 
-console.log(stepDetail)
+console.log(stepDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
 
