@@ -7,12 +7,18 @@ module.exports = function(app) {
 
     //get all projects
 
-    app.get("/api/projects", function(req, res) {
-        db.Project.findAll({}).then(function(results) {
-            res.json(results);
-            // res.render("/project", result);
+    app.get("/api/projects/:type", function(req, res) {
+        console.log(req.params.type)
+        db.Project.findAll({
+            where: {
+                Project_Type: req.params.type
+            }
+        }).then(function(results) {
+            res.render("searchProject", { project: results });
         });
     });
+
+
 
 
 

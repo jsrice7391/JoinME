@@ -11,8 +11,9 @@ module.exports = function(app) {
         db.Step.findAll({}).then(function(results) {
             res.json(results);
             // res.render("/step", result);
-        })
+        });
     });
+
 
     //create a project
     //note that description is misspelled in model
