@@ -33,14 +33,31 @@ module.exports = function (app) {
 
     });
 
+    // app.put("/api/steps/:id", function (req, res) {
+    //     db.Step.update(
+    //         db.Step.Completed,
+    //         {
+    //           where: {
+    //             id: req.params.id
+    //           }
+    //         }).then(function(results) {
+    //           res.json(results);
+    //           console.log("updated step.")
+    //         });
+    // });
+    
+
     app.delete("/api/steps/:id", function (req, res) {
         // Delete the Step with id from req.body.id
+        console.log(req.params);
         db.Step.destroy({
             where: {
-                id: req.body.id
+                id: req.params.id
             }
+            
         }).then(function (results) {
             res.json(results);
+            
             console.log("step deleted.")
         });
     });
