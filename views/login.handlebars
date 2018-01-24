@@ -6,12 +6,26 @@
     <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <!-- load fontawesome -->
-       <style>
+    <style>
         body {
-            padding-top: 200px;
+            height: 100%;
+            margin: 0 auto;
+            margin-bottom: 0;
+            /* The image used */
+            background-image: url("./assets/images/foggymountains.jpg");
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x; */
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
         }
 
         #loginPanel {
+            width: 600px;
+            margin: 0 auto;
+            margin-top: 200px;
             background-color: #e3f2fd;
             border-radius: 5px;
             font-family: 'Arimo', sans-serif;
@@ -71,19 +85,34 @@
             background-color: #E18942;
         }
 
-        p, a, label {
+        p,
+        a,
+        label {
             font-weight: bold;
             font-size: 16px;
         }
 
         a {
-            color:#E18942;
+            color: #E18942;
+        }
+
+        footer {
+            position: fixed;
+            height: 108px;
+            bottom: 0;
+            width: 100%;
+            background-color: #E18942;
+        }
+
+        #footImg {
+            vertical-align: middle;
         }
     </style>
 </head>
 
 <body>
- <div class="card" id="loginPanel">
+
+    <div class="card" id="loginPanel">
 
         <div class="card-body" id="loginPanelBody">
 
@@ -112,7 +141,12 @@
 
         </div>
 
-    </div>
+        {{!-- footer --}}
+        <footer class="fixed-bottom">
+            <div class="mx-auto" id="footImg" style="width: 100px;">
+                <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+            </div>
+        </footer>
 </body>
 
 </html>

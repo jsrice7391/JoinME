@@ -11,11 +11,7 @@
             <a class="nav-link disabled" id="activeNavLink" href="/">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
             <a class="nav-link" href="/searchProject">Search Projects</a>
-
-            {{#if user}}
-            <a class="nav-link" href="/index"> Hello {{user.name}}</a>
-            {{/if}}
-            <a href="/logout" type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</a>
+            <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
 
@@ -134,6 +130,7 @@
     </div>
 </div>
 
+<div class="bodyContainer">
 <div class="card" id="usersProjectListPanel">
     <div class="card-header" id="projectListPanelHeader">Your JoinME Projects</div>
     <div class="card-body" id="projectListPanelBody">
@@ -146,6 +143,8 @@
             </li>
         </ul>
     </div>
+</div>
+
 </div>
 
 {{!-- footer --}}

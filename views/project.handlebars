@@ -1,48 +1,52 @@
-<div class="container-fluid">
-    <h2 class="tagline">Let's accomplish more together</h2>
-</div>
+<div class="projectPageBodyContainer">
 
-<!--navbar-->
-<nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
-    <div class="container">
-        <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-        <a class="nav-link" href="/user">Home</a>
-        <a class="nav-link" href="../public/about.html">About</a>
-        <a class="nav-link" href="/searchProject">Search Projects</a>
-        <button type="button" class="btn btn-default navbar-btn" id="btnSignOut">Sign Out</button>
+    <div class="container-fluid">
+        <h2 class="tagline">Let's accomplish more together</h2>
     </div>
-</nav>
+
+    <!--navbar-->
+    <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
+        <div class="container">
+            <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
+            <a class="nav-link" href="/user">Home</a>
+            <a class="nav-link" href="../public/about.html">About</a>
+            <a class="nav-link" href="/searchProject">Search Projects</a>
+            <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
+        </div>
+    </nav>
 
 
-<div class="card" id="projectPanel">
-    <div class="card-header" id="projectPanelHeader">Emma's project{{Project.Project_Name}}</div>
-    <table class="projectPanelTable" border="1">
-        <tbody class="projectPanelTableBody">
-            <tr>
-                {{#each Step.Step}}
-                <th class="projectTableHeaders">Step One{{this.Step}}</th>
-                <th class="projectTableHeaders">Step one description here{{this.Step_description}}</th>
-                <th class="projectTableHeaders">Completed{{this.Completed}}</th>
-                {{/each}}
-            </tr>
-            <tr>
-                <th class="projectTableHeaders">Step Two</th>
-                <th class="projectTableHeaders">Step two description is kind of long but that's ok becuase this table header will adjust size</th>
-                <th class="projectTableHeaders">Incomplete</th>
-            </tr>
-            <tr>
-                <th class="projectTableHeaders">Step Three</th>
-                <th class="projectTableHeaders">Step three description here</th>
-                <th class="projectTableHeaders">Incomplete</th>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-<!--footer-->
-<footer class="fixed-bottom">
-    <div class="mx-auto" id="footImg" style="width: 100px;">
-        <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+    <div class="card" id="projectPanel">
+        <div class="card-header" id="projectPanelHeader">Emma's project{{Project.Project_Name}}</div>
+        <table class="projectPanelTable" border="1">
+            <tbody class="projectPanelTableBody">
+                <tr>
+                    {{#each Step.Step}}
+                    <th class="projectTableHeaders">Step One{{this.Step}}</th>
+                    <th class="projectTableHeaders">Step one description here{{this.Step_description}}</th>
+                    <th class="projectTableHeaders">Completed{{this.Completed}}</th>
+                    {{/each}}
+                </tr>
+                <tr>
+                    <th class="projectTableHeaders">Step Two</th>
+                    <th class="projectTableHeaders">Step two description is kind of long but that's ok becuase this table header will adjust size</th>
+                    <th class="projectTableHeaders">Incomplete</th>
+                </tr>
+                <tr>
+                    <th class="projectTableHeaders">Step Three</th>
+                    <th class="projectTableHeaders">Step three description here</th>
+                    <th class="projectTableHeaders">Incomplete</th>
+                </tr>
+            </tbody>
+        </table>
     </div>
-</footer>
+
+
+    <!--footer-->
+    <footer class="fixed-bottom">
+        <div class="mx-auto" id="footImg" style="width: 100px;">
+            <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+        </div>
+    </footer>
+
+</div>

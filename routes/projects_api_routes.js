@@ -14,9 +14,14 @@ module.exports = function(app) {
         })
     });
 
-    //create a project
-    //note that description is misspelled in model
 
+    // {"Project_name": "Obi Wan Kenobi",
+    // "Project_type": "Social",
+    // "Project_descripton": "weight loss",
+    // "userId": "1"
+    // }
+
+    //can create project as long as there is a user in user table 
     app.post("/api/projects", function(req, res) {
         console.log(req.body)
         db.Project.create({
