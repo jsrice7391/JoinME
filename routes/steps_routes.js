@@ -32,19 +32,24 @@ module.exports = function (app) {
 
     });
 
-    // app.put("/api/steps/:id", function (req, res) {
-    //     db.Step.update(
-    //         db.Step.Completed,
-    //         {
-    //           where: {
-    //             id: req.params.id
-    //           }
-    //         }).then(function(results) {
-    //           res.json(results);
-    //           console.log("updated step.")
-    //         });
-    // });
+
+    //this route updates a step based on id to show completed as true.
     
+    app.put("/api/steps/:id", function (req, res) {
+        db.Step.update(
+           {Completed: true},
+            {
+              where: {
+                id: 1
+              }
+            }).then(function(results) {
+              res.json(results);
+              console.log("updated step.")
+            });
+    });
+    
+    // { Completed: true },
+    // { where: { _id: 1 } }
 
     app.delete("/api/steps/:id", function (req, res) {
         // Delete the Step with id from req.body.id
