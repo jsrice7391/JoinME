@@ -2,12 +2,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-       /* The image used */
-       background-image: url("../images/foggymountains.jpg");
-       /* Center and scale the image nicely */
-       /* background-position: center; */
-       background-repeat: no-repeat;
-       background-size: cover;    
+    background-color: #e3f2fd;
 }
 
 .container-fluid {
@@ -47,7 +42,45 @@ body {
     position: absolute;
     right: 40px;
     background:#E18942;
-    color: #e3f2fd;      
+    color: #e3f2fd;
+    font-family: 'Arimo', sans-serif;     
+}
+
+/* project panel */
+#projectPanelHeader {
+    font-size: 30px;
+    text-align: center;
+    background-color: #343a40;
+    color: #E18942;
+    font-weight: bold;
+    font-family: 'Arimo', sans-serif;        
+}
+
+#projectPanel {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    background-color: #eeeeee;
+    color: #343a40;
+    border-radius: 5px;
+    font-family: 'Arimo', sans-serif;     
+}
+
+.projectPanelTable {
+    width: 1000px;
+}
+
+.projectPanelTableBody {
+    width: 1000px;
+    text-align: center;
+}
+
+.projectTableHeaders {
+    font-family: 'Arimo', sans-serif;
+    color: #343a40;
+    width: 33%;
+    padding: 10px;
 }
 
 /* footer */
@@ -58,6 +91,7 @@ footer {
     width: 100%;
     background-color: #E18942;
 }
+
 #footImg {
     vertical-align: middle;
 }

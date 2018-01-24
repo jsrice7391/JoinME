@@ -1,10 +1,28 @@
-<div class="imageDiv">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/userPageStyles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="imageDiv">
 
         <div class="container-fluid">
             <h2 class="tagline">Let's accomplish more together</h2>
         </div>
 
-        {{!-- navbar --}}
         <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
             <div class="container">
                 <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
@@ -15,7 +33,6 @@
             </div>
         </nav>
 
-        {{!-- welcome panel --}}
         <div class="card" id="welcomePanel">
             <div class="card-body" id="welcomePanelBody">
                 <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
@@ -26,15 +43,15 @@
                 <div id="welcomePanelBtnGroup">
                     <button type="button" class="btn btn-primary" id="createProjectBtn" data-toggle="modal" data-target="#createProjectModal">Create a Project</button>
                     <a class="btn btn-primary" id="projectSearchBtn" href="/searchProject">Search Projects</a>
+                    <!-- <div class="input-group-append"> -->
+                    <!-- <span class="glyphicon glyphicon-search"></span> -->
                 </div>
-
             </div>
         </div>
 
-    {{!-- close image div --}}
+    <!-- close image div -->
     </div>
 
-    {{!-- create project modal --}}
     <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -135,17 +152,35 @@
         <div class="card-header" id="projectListPanelHeader">Your JoinME Projects</div>
         <div class="card-body" id="projectListPanelBody">
             <ul class="list-group">
+                <li class="list-group-item" id="projectListHeadersInList">
+                    <h3 id="projectListH3">Project Name</h3>
+                    <h3 id="projectListH3">Date Started</h3>
+                </li>
+            </ul>
+            <ul class="list-group">
                 <li class="list-group-item" id="projectNameItem">
-                    <a class="projectNameInList" href="./project"><h5>Emma's Dummy Project</h5></a>
-                    <h5 class="projectStartDate">Today</h5>
+                        <a class="projectNameInList" href="./project"><h5>Emma's Dummy Project</h5></a>
+                        <h5 class="projectStartDate">Today</h5>
                 </li>
             </ul>
         </div>
     </div>
 
-    {{!-- footer --}}
+    <!--footer-->
     <footer class="fixed-bottom">
         <div class="mx-auto" id="footImg" style="width: 100px;">
             <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
         </div>
     </footer>
+
+    <script src="./assets/js/userPage.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

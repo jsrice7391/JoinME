@@ -10,37 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="public/assets/css/loginPageStyles.css">
+    <link rel="stylesheet" href="./assets/css/homePageStyles.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- javascript -->
-    <script src="/assets/js/loginPage.js"></script>
-
-    <!-- firebaseui -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Welcome to JoinME</h1>
-    <h2>Let's accomplish more together</h2>
+    <div class="homePageContainer">
+        <h1 class="homePageWelcome">Welcome to <span id="joinmeSpan">JoinME</span></h1>
+        <h2 class="homePageText">Let's accomplish more together</h2>
 
-    <a class="btn btn-primary" href="/signup">Sign up</button>
-    <a class="btn btn-priamry" href="/login">Logn in</a>
+        <a class="btn btn-default" id="signUpBtnHomePage"href="/signup">Sign Up</a>
+        <a class="btn btn-default" id="loginBtnHomePage"href="/login">Login</a>
+    </div>
 
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 

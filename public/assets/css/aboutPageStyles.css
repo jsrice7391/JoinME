@@ -54,12 +54,12 @@ body {
     position: absolute;
     right: 40px;
     background: #E18942;
-    color: #e3f2fd;      
+    color: #e3f2fd; 
+    font-family: 'Arimo', sans-serif;     
 }
 
 /* about card */
 #About {
-   /* MAKE IT GO LEFT */
     margin-top: 30px;
     animation: fadein 7s;
     -moz-animation: fadein 7s; /* Firefox */
