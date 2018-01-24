@@ -1,5 +1,6 @@
 var db = require("../models");
 var path = require("path");
+var projects = {}
 // var testing = require("../routes/testing.js");
 
 
@@ -10,6 +11,8 @@ module.exports = function(app) {
       app.get("/api/projects", function(req, res) {
         db.Project.findAll({}).then(function(results) {
             res.json(results);
+            projects = results;
+            console.log(projects);
             // res.render("/project", result);
         })
     });
