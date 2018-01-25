@@ -16,7 +16,8 @@
     margin-bottom: 0;
 }
 
-/* navbar */
+/* Navbar */
+/* ============================================================= */
 .container {
     width: 600px;
     margin-left: 0;
@@ -37,6 +38,12 @@
     color: #9e9e9e;
     font-family: 'Arimo', sans-serif; 
     font-size: 14px;
+}
+
+#drop {
+    width: 100px;
+    margin-left: 444px;
+    top: 70px;
 }
 
 #activeNavLink {
@@ -62,7 +69,8 @@
     margin-left: 10px;
 }
 
-/* all projects panel */
+/* All Projects Panel */
+/* ============================================================= */
 #allProjectsPanel {
     width: 1000px;
     margin: 0 auto;
@@ -109,20 +117,4 @@
     padding-right: 70px;
     font-weight: bold;    
     font-family: 'Arimo', sans-serif; 
-}
-
-
-
-
-
-/* footer */
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-    background-color: #E18942;
-}
-#footImg {
-    vertical-align: middle;
 }

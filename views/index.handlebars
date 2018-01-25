@@ -1,16 +1,27 @@
 <div class="imageDiv">
 
-<div class="container-fluid">
-    <h2 class="tagline">Let's accomplish more together</h2>
-</div>
+    <div class="container-fluid">
+        <h2 class="tagline">Let's accomplish more together</h2>
+    </div>
 
     {{!-- navbar --}}
     <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
         <div class="container">
             <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
-            <a class="nav-link" id="activeNavLink" href="">Home</a>
+            <a class="nav-link" id="activeNavLink" href="#">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" onclick="myFunction()">Search Projects</a>
+            {{!-- <a class="nav-link" onclick="myFunction()">Search Projects</a>--}}
+            {{!-- <li class="nav-item dropdown"> --}}
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+          Search Projects
+        </a>
+                <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Fitness</a>
+                    <a class="dropdown-item" href="#">Diet</a>
+                    <a class="dropdown-item" href="#">Social</a>
+                </div>
+            {{!-- </li> --}}
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
@@ -131,19 +142,19 @@
 </div>
 
 <div class="bodyContainer">
-<div class="card" id="usersProjectListPanel">
-    <div class="card-header" id="projectListPanelHeader">Your JoinME Projects</div>
-    <div class="card-body" id="projectListPanelBody">
-        <ul class="list-group">
-            <li class="list-group-item" id="projectNameItem">
-                <a class="projectNameInList" href="./project">
-                    <h5>Emma's Dummy Project</h5>
-                </a>
-                <h5 class="projectStartDate">Today</h5>
-            </li>
-        </ul>
+    <div class="card" id="usersProjectListPanel">
+        <div class="card-header" id="projectListPanelHeader">Your JoinME Projects</div>
+        <div class="card-body" id="projectListPanelBody">
+            <ul class="list-group">
+                <li class="list-group-item" id="projectNameItem">
+                    <a class="projectNameInList" href="./project">
+                        <h5>Emma's Dummy Project</h5>
+                    </a>
+                    <h5 class="projectStartDate">Today</h5>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 
 </div>
 

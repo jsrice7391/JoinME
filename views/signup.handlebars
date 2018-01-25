@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <!-- load fontawesome -->
     <style>
         body {
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
             height: 100%;
             margin: 0 auto;
             /* The image used */
@@ -25,98 +20,10 @@
             -webkit-background-size: cover;
             -moz-background-size: cover;
         }
-
-        #signupPanel {
-            width: 700px;
-            margin: 0 auto;
-            margin-top: 100px;
-            background-color: #e3f2fd;
-            border-radius: 5px;
-            font-family: 'Arimo', sans-serif;
-            animation: fadein 2s;
-            -moz-animation: fadein 2s;
-            /* Firefox */
-            -webkit-animation: fadein 2s;
-            /* Safari and Chrome */
-            -o-animation: fadein 2s;
-            /* Opera */
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-moz-keyframes fadein {
-            /* Firefox */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes fadein {
-            /* Safari and Chrome */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-o-keyframes fadein {
-            /* Opera */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        #signupPanelBody {
-            margin: 0 auto;
-        }
-
-        #signupSubmitBtn {
-            background-color: #E18942;
-        }
-
-        p,
-        a,
-        label {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        a {
-            color: #E18942;
-        }
-
-        footer {
-            position: fixed;
-            height: 100px;
-            bottom: 0;
-            width: 100%;
-            background-color: #E18942;
-        }
-
-        #footImg {
-            vertical-align: middle;
-        }
     </style>
 </head>
 
 <body>
-
-
 
     <div class="card" id="signupPanel">
 
@@ -161,7 +68,7 @@
 
             <hr>
 
-            <p>Already have an account? <a href="/login">Login</a></p>
+            <p>Already have an account? <a class="loginLinkOnSignup" href="/login">Login</a></p>
             <p>Or go <a href="/">home</a>.</p>
 
             </div>
