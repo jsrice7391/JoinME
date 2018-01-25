@@ -35,10 +35,16 @@ module.exports = function(app) {
             },
             include: [{
                 model: db.Step,
-                attributes: ["Step", "Step Description"]
+                as: "step"
             }]
         }).then(function(result) {
-            res.json(result)
+            var project = result.dataValues;
+
+            for (let i in project.step) {
+                console.log(project.step[i].Step_Description);
+            }
+
+            res.render("project", { project: project })
         });
     });
 
@@ -60,7 +66,7 @@ module.exports = function(app) {
         var newProject = req.body;
 
 
-        console.log(newProject)
+
 
         var the_new_project = db.Project.create({
             Project_name: req.body.Project_name,
@@ -94,9 +100,10 @@ module.exports = function(app) {
         });
 
 
-        res.redirect("/project/")
-
-
+        res.redirect(url.format({
+            pathname: "/projects/",
+            query: the_new_project
+        }));
 
 
 

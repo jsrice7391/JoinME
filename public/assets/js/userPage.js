@@ -56,7 +56,7 @@ $(document).ready(function() {
             type: "POST",
             data: sendProject
         }).then(function() {
-            console.log("That worked")
+
         });
 
 
