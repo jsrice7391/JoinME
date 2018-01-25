@@ -1,4 +1,4 @@
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="searchProjectPageBodyContainer">
 
     <div class="container-fluid">
@@ -11,7 +11,15 @@
             <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
             <a class="nav-link" href="/index">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" id="activeNavLink" href="#">Search Projects</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            Search Projects
+            </a>
+            <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Fitness</a>
+                <a class="dropdown-item" href="#">Diet</a>
+                <a class="dropdown-item" href="#">Social</a>
+            </div>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
@@ -20,15 +28,15 @@
         <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
     </span>button to join a project!</h3>
     </div>
-    
+
     {{!-- user projects list --}}
     <div class="card" id="allProjectsPanel">
         <div class="card-header" id="allProjectsPanelHeader">All {{project.Project_Type}}Projects</div>
 
-       
+
         <div class="card-body" id="allProjectsListPanelBody">
             <ul class="list-group">
-                 {{#each project}}
+                {{#each project}}
                 <li class="list-group-item" id="projectNameItem">
                     <p class="projectNameInAllList"><a href="/projects/{{id}}">{{Project_name}}</a></p>
                     <p class="projectDescriptionInAllList">{{Project_descripton}}</p>

@@ -40,6 +40,12 @@
     font-size: 14px;
 }
 
+#drop {
+    width: 100px;
+    margin-left: 444px;
+    top: 70px;
+}
+
 #activeNavLink {
     font-size: 18px;
     color: #e3f2fd;  

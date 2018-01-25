@@ -54,6 +54,12 @@ body {
     color: #e3f2fd;  
 }
 
+#drop {
+    width: 100px;
+    margin-left: 444px;
+    top: 70px;
+}
+
 #btnSignOut {
     position: absolute;
     right: 40px;
