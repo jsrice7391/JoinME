@@ -1,0 +1,13 @@
+/* Footer */
+/* ============================================================= */
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-color: #E18942;
+}
+
+#footImg {
+    vertical-align: middle;
+}

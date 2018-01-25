@@ -1,0 +1,73 @@
+#loginPanel {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 220px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    font-family: 'Arimo', sans-serif;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#loginPanelBody {
+    margin: 0 auto;
+}
+
+#loginSubmitBtn {
+    background-color: #E18942;
+}
+
+p,
+.signUpLinkOnLogin,
+label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signUpLinkOnLogin {
+    color: #E18942;
+}

@@ -16,7 +16,8 @@
     margin-bottom: 0;
 }
 
-/* navbar */
+/* Navbar */
+/* ============================================================= */
 .container {
     width: 600px;
     margin-left: 0;
@@ -41,7 +42,8 @@
 
 #activeNavLink {
     font-size: 18px;
-    color: #e3f2fd;  
+    color: #e3f2fd; 
+    font-family: 'Arimo', sans-serif;     
 }
 
 #btnSignOut {
@@ -52,7 +54,8 @@
     font-family: 'Arimo', sans-serif;     
 }
 
-/* project panel */
+/* Project Panel */
+/* ============================================================= */
 .instructionsForCompletion {
     margin: 0 auto;
     text-align: center;
@@ -108,7 +111,8 @@
 
 }
 
-/* complete button */
+/* Complete Button */
+/* ============================================================= */
 .completeBtn {
     width: 12%;
     height: 0;
@@ -124,23 +128,10 @@
 .completeBtn:hover {
     background: #262626;
 }
-/* theoretically for the check mark that I can't get in the button */
+
 .completeBtn img {
     display: block;
     width: 95%;
     padding: 15%;
     height: auto;
-}
-
-/* footer */
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
-    background-color: #E18942;
-}
-
-#footImg {
-    vertical-align: middle;
 }

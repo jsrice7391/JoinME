@@ -5,12 +5,11 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <!-- load bootstrap css -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <!-- load fontawesome -->
     <style>
         body {
             height: 100%;
             margin: 0 auto;
-            margin-bottom: 0;
+            
             /* The image used */
             background-image: url("./assets/images/foggymountains.jpg");
             /* Center and scale the image nicely */
@@ -20,92 +19,6 @@
             background-size: cover;
             -webkit-background-size: cover;
             -moz-background-size: cover;
-        }
-
-        #loginPanel {
-            width: 600px;
-            margin: 0 auto;
-            margin-top: 200px;
-            background-color: #e3f2fd;
-            border-radius: 5px;
-            font-family: 'Arimo', sans-serif;
-            animation: fadein 2s;
-            -moz-animation: fadein 2s;
-            /* Firefox */
-            -webkit-animation: fadein 2s;
-            /* Safari and Chrome */
-            -o-animation: fadein 2s;
-            /* Opera */
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-moz-keyframes fadein {
-            /* Firefox */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-webkit-keyframes fadein {
-            /* Safari and Chrome */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @-o-keyframes fadein {
-            /* Opera */
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        #loginPanelBody {
-            margin: 0 auto;
-        }
-
-        #loginSubmitBtn {
-            background-color: #E18942;
-        }
-
-        p,
-        a,
-        label {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        a {
-            color: #E18942;
-        }
-
-        footer {
-            position: fixed;
-            height: 108px;
-            bottom: 0;
-            width: 100%;
-            background-color: #E18942;
-        }
-
-        #footImg {
-            vertical-align: middle;
         }
     </style>
 </head>
@@ -117,8 +30,6 @@
         <div class="card-body" id="loginPanelBody">
 
             <h1><span class="fa fa-sign-in"></span> Login</h1>
-
-
 
             <!-- LOGIN FORM -->
             <form action="/login" method="post">
@@ -136,7 +47,7 @@
 
             <hr>
 
-            <p>Need an account? <a href="/signup">Signup</a></p>
+            <p>Need an account? <a class="signupLinkOnLogin" href="/signup">Signup</a></p>
             <p>Or go <a href="/">home</a>.</p>
 
         </div>
