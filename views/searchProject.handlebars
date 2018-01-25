@@ -11,25 +11,10 @@
             <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
             <a class="nav-link" href="/user">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link disabled" id="activeNavLink" href="#">Search Projects</a>
+            <a class="nav-link disabled" id="activeNavLink" href="">Search Projects</a>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
-<script>
-
-
-//get all projects
-
-
-
-
-
-
-</script>
-
-
-
-
 
     <div class="instructionsForJoin">
         <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
@@ -44,7 +29,7 @@
             <ul class="list-group">
                  {{#each project}}
                 <li class="list-group-item" id="projectNameItem">
-                    <p class="projectNameInAllList">{{Project_name}}</p>
+                    <p class="projectNameInAllList"><a href="/api/projects/{{id}}">{{Project_name}}</a></p>
                     <p class="projectDescriptionInAllList">{{Project_descripton}}</p>
                     <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
                 </li>

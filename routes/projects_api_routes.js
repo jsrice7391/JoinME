@@ -13,9 +13,25 @@ module.exports = function(app) {
                 Project_Type: req.params.type
             }
         }).then(function(results) {
-            res.render("searchProject", { project: results });
-        });
-    });
+            if (results.length !== 0) {
+                res.render("searchProject", { project: results });
+            } else {
+                res.redirect("/api/projects")
+            }
+        })
+    })
+
+
+    app.get("/api/projects", function(req, res) {
+        db.Project.findAll({}).then(function(results) {
+            res.render("searchProject", { project: results })
+        })
+    })
+
+
+
+
+
 
 
 
