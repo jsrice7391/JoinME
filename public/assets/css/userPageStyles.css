@@ -29,7 +29,8 @@
     margin-bottom: 0;
 }
 
-/* navbar */
+/* Navbar */
+/* ============================================================= */
 .container {
     width: 600px;
     margin-left: 0;
@@ -70,7 +71,8 @@
     font-family: 'Arimo', sans-serif;     
 }
 
-/* welcome panel */
+/* Welcome Panel */
+/* ============================================================= */
 #welcomePanel {
     width: 700px;
     margin: 0 auto;
@@ -137,7 +139,8 @@
     font-family: 'Arimo', sans-serif;   
 }
 
-/* create project modal */
+/* Create Project Modal */
+/* ============================================================= */
 .modal-content {
     width: 800px;
     font-family: 'Arimo', sans-serif;    
@@ -272,7 +275,8 @@
     font-family: 'Arimo', sans-serif;         
 }
 
-/* user's projects list */
+/* User's Project List */
+/* ============================================================= */
 #usersProjectListPanel {
     width: 700px;
     height: 100%;
@@ -334,7 +338,8 @@ h5 {
     text-align: center;
 }
 
-/* footer */
+/* Footer */
+/* ============================================================= */
 footer {
     position: fixed;
     height: 100px;

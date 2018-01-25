@@ -21,7 +21,8 @@ body {
     margin-bottom: 0;
 }
 
-/* navbar */
+/* Navbar */
+/* ============================================================= */
 .container {
     width: 600px;
     margin-left: 0;
@@ -29,7 +30,6 @@ body {
 
 #joinmeNavbar {
     background-color: #222222;
-    /* margin-top: 75px; */
 }
 
 #joinmeNavLink {
@@ -62,7 +62,8 @@ body {
     font-family: 'Arimo', sans-serif;     
 }
 
-/* about card */
+/* About Card */
+/* ============================================================= */
 #About {
     margin-top: 30px;
     animation: fadein 7s;
@@ -139,7 +140,8 @@ li {
     font-size: 20px;
 }
 
-/* about image */
+/* About Image */
+/* ============================================================= */
 #help {
     margin-top: 15px;
     animation: fadein 5s;
@@ -180,7 +182,8 @@ li {
     }
 }
 
-/* footer */
+/* Footer */
+/* ============================================================= */
 footer {
     position: fixed;
     height: 100px;

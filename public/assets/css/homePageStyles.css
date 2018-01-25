@@ -3,10 +3,6 @@ body, html {
     width: 100%;
     margin: 0;
     display: block;
-    /* position: relative; */
-       /* The image used */
-       /* background-image: url("../images/boots.jpeg"); */
-       /* Center and scale the image nicely */
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;
@@ -73,6 +69,8 @@ body::after {
     }
 }
 
+/* Panel */
+/* ============================================================= */
 #joinmeSpan {
     color: #E18942;
 }
