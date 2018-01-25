@@ -118,7 +118,7 @@
     border-radius: 50%;
     border: 2px solid #eeeeee;
     overflow: hidden;
-    background: #343a40;
+    background: #9e9e9e;
     box-shadow: 0 0 3px gray;
 }
 .completeBtn:hover {

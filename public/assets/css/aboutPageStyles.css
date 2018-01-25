@@ -45,6 +45,10 @@ body {
     font-size: 14px;
 }
 
+.nav-link:hover {
+    color: #E18942 !important;
+}
+
 #activeNavLink {
     font-size: 18px;
     color: #e3f2fd;  
