@@ -16,8 +16,8 @@
     </nav>
 
     <div class="instructionsForCompletion">
-        <h3>Click the step completion<span><img src="assets/images/" class="img-fluid" id="completeBtnInstructions">
-    </span>button to mark a step as completed in your project!</h3>
+        <h3>Click the step completion<div class="completeBtn"><a href="#"></a></div> button to mark a step as completed in your project!
+        </h3>
     </div>
 
     <div class="card" id="projectPanel">
@@ -29,22 +29,22 @@
                     <th class="projectTableHeaders">Step Description</th>
                     <th class="projectTableHeaders">Completion Status</th>
                 </tr>
-                {{#each Step}}
+                {{!-- {{#each Step}} --}}
                 <tr>
                     <td class="stepName">{{Step}}</td>
                     <td class="stepDescription">{{Step_description}}</td>
-                    <td class="stepCompletionStatus">{{Completed}}</th>
+                    <td class="stepCompletionStatus">Completed</th>
                 </tr>
-                {{/each}}
+                {{!-- {{/each}} --}}
             </tbody>
         </table>
     </div>
 
-    <div class="completeBtn">
+    {{!-- <div class="completeBtn">
         <a href="#"></a>
-            <span class="glyphicon glyphicon-ok"></span>
+        <span class="glyphicon glyphicon-ok"></span>
         </a>
-    </div>
+    </div> --}}
 
     <!--footer-->
     <footer class="fixed-bottom">
