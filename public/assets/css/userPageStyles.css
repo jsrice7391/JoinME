@@ -52,6 +52,10 @@
     font-size: 14px;
 }
 
+.nav-link a:hover {
+    color: white !important;
+}
+
 #activeNavLink {
     font-size: 18px;
     color: #e3f2fd;  
@@ -329,8 +333,6 @@ h5 {
     font-family: 'Arimo', sans-serif;
     text-align: center;
 }
-
-
 
 /* footer */
 footer {
