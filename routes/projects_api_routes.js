@@ -29,6 +29,21 @@ module.exports = function(app) {
     })
 
 
+    app.get("/project/:id", function(req, res) {
+        db.Project.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(results) {
+            if (results.length !== 0) {
+                res.json(results);
+
+            }
+        })
+    })
+
+
+
 
 
 
