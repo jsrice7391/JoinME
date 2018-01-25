@@ -7,10 +7,10 @@
     {{!-- navbar --}}
     <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
         <div class="container">
-            <a class="nav-link disabled" id="joinmeNavLink" href="/">JoinME</a>
-            <a class="nav-link disabled" id="activeNavLink" href="/index">Home</a>
+            <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
+            <a class="nav-link" id="activeNavLink" href="">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" onclick="myFunction()">Projects</a>
+            <a class="nav-link" onclick="myFunction()">Search Projects</a>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
@@ -119,7 +119,7 @@
 
                     <div class="form-group" id="submitFormGroup">
                         <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
-                        <a type="button" class="btn btn-primary" id="submitModalBtn" value="submit" href="/api/projects" data-userId="{{user.id}}">submit</a>
+                        <a type="button" class="btn btn-primary" id="submitModalBtn" value="submit" data-userId="{{user.id}}">submit</a>
                     </div>
                 </form>
             </div>

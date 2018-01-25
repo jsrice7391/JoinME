@@ -103,7 +103,8 @@ body {
     background-color: #222222;
     color: #9e9e9e;
     font-family: 'Arimo', sans-serif; 
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .card-block {
@@ -112,7 +113,26 @@ body {
 
 .card-text {
     padding: 15px;
-    font-family: 'Arimo', sans-serif;     
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    padding: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px; 
+}
+
+li {
+    margin-left: 80px;
+}
+
+.list-group-item {
+    background-color: #e3f2fd;
+    border: none;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* about image */

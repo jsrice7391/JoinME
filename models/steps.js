@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
 
 
     Step.associate = function(models) {
-        Step.belongsTo(models.Project, {
+        Step.hasOne(models.Project, {
             onDelete: "CASCADE",
             foreignKey: {
                 allowNull: false
@@ -31,9 +31,9 @@ module.exports = function(sequelize, DataTypes) {
 
     Step.afterValidate(function(step) {
         if (step.Completed === "True") {
-          console.log("Send message")
+            console.log("Send message")
         }
-      })
+    })
 
     return Step;
 };

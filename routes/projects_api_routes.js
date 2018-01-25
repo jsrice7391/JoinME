@@ -30,13 +30,15 @@ module.exports = function(app) {
 
     app.get("/project/:id", function(req, res) {
 
-        Project = db.Project;
 
-        Project.findAll({
+        db.Project.findOne({
             where: {
                 id: req.params.id
             },
-            include: db.Steps
+            include: [{
+                model: db.Step,
+                attributes: ["Step", "Step Description"]
+            }]
         }).then(function(result) {
             res.json(result)
         });
@@ -53,17 +55,56 @@ module.exports = function(app) {
 
 
     //can create project as long as there is a user in user table 
-    app.post("/api/projects", function(req, res) {
-        console.log(req.body)
-        db.Project.create({
+    app.post("/projects", function(req, res) {
+
+        console.log(res.body);
+
+
+        var newProject = db.Project.create({
             Project_name: req.body.Project_name,
             Project_type: req.body.Project_type,
             Project_descripton: req.body.Project_descripton,
-            UserId: req.body.userId
-        }).then(function(results) {
-            //   
-            console.log("This project was created.");
+            UserId: req.body.userId,
+
+            step: [{
+                    Step: req.body.stepOne,
+                    Step_Description: req.body.stepOneDescription
+                },
+                {
+                    Step: req.body.stepOne,
+                    Step_Description: req.body.stepOneDescription
+                }, {
+                    Step: req.body.stepOne,
+                    Step_Description: req.body.stepOneDescription,
+                }, {
+                    Step: req.body.stepOne,
+                    Step_Description: req.body.stepOneDescription
+                }, {
+                    Step: req.body.stepOne,
+                    Step_Description: req.body.stepOneDescription
+                }
+            ]
+        }, {
+            include: [db.Step]
         });
+
+
+        res.render("project", { project: newProject });
+
+
+
+
+
+        // console.log(req.body)
+        // db.Project.create({
+        //     Project_name: req.body.Project_name,
+        //     Project_type: req.body.Project_type,
+        //     Project_descripton: req.body.Project_descripton,
+        //     UserId: req.body.userId
+        // }).then(function(results) {
+        //     //   
+        //     console.log("This project was created.");
+        // });
 
 
     });

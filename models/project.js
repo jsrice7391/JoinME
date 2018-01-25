@@ -30,6 +30,12 @@ module.exports = function(sequelize, DataTypes) {
         });
     };
 
+    Project.assciate = function(models) {
+        Project.hasMany(models.Step, {
+            onDelete: "cascade"
+        })
+    };
+
     // Project.belongsToMany(User, {through: 'UserProject'});
     // User.belongsToMany(Project, {through: 'UserProject'});
 
