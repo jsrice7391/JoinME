@@ -29,8 +29,6 @@ module.exports = function(app) {
 
 
     app.get("/project/:id", function(req, res) {
-
-
         db.Project.findOne({
             where: {
                 id: req.params.id
@@ -59,38 +57,46 @@ module.exports = function(app) {
 
         console.log("Here is the user ID:" + req.body.theUserId);
 
+        var newProject = req.body;
 
 
-        var project = Project.create({
+        console.log(newProject)
+
+        var the_new_project = db.Project.create({
             Project_name: req.body.Project_name,
             Project_type: req.body.Project_type,
             Project_descripton: req.body.Project_descripton,
             UserId: req.body.theUserId,
-            steps: [{
-                    Step: req.body.stepOne,
-                    Step_Description: req.body.stepOneDescription
+            step: [{
+                    Step: newProject.stepOne,
+                    Step_Description: newProject.stepOneDescription
                 },
                 {
-                    Step: req.body.stepTwo,
-                    Step_Description: req.body.stepTwoDescription
+                    Step: newProject.stepTwo,
+                    Step_Description: newProject.stepTwoDescription
                 }, {
-                    Step: req.body.stepThree,
-                    Step_Description: req.body.stepThreeDescription,
+                    Step: newProject.stepThree,
+                    Step_description: newProject.stepThreeDescription,
                 }, {
-                    Step: req.body.stepFour,
-                    Step_Description: req.body.stepFourDescription
+                    Step: newProject.stepFour,
+                    Step_Description: newProject.stepFourDescription
                 }, {
-                    Step: req.body.stepFive,
-                    Step_Description: req.body.stepFiveDescription
+                    Step: newProject.stepFive,
+                    Step_Description: newProject.stepFiveDescription
                 }
             ]
         }, {
             include: [{
                 model: db.Step,
+                as: "step"
             }]
+
         });
 
-        res.send("Works");
+
+        res.redirect("/project/")
+
+
 
 
 

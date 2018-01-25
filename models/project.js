@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         });
 
-        Project.hasMany(models.Step)
+        Project.hasMany(models.Step, { as: "step" });
     };
 
 

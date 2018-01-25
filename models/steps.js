@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes) {
         },
         Step_description: {
             type: DataTypes.TEXT,
-            allowNull: false,
             len: [1]
         },
         Completed: {
