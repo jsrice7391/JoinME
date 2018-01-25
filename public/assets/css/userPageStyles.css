@@ -52,8 +52,8 @@
     font-size: 14px;
 }
 
-.nav-link a:hover {
-    color: white !important;
+.nav-link:hover {
+    color: #E18942 !important;
 }
 
 #activeNavLink {
