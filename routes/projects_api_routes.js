@@ -6,7 +6,6 @@ var path = require("path");
 module.exports = function(app) {
 
     //get all projects
-
     app.get("/api/projects/:type", function(req, res) {
         db.Project.findAll({
             where: {
@@ -30,17 +29,18 @@ module.exports = function(app) {
 
 
     app.get("/project/:id", function(req, res) {
-        db.Project.findOne({
+
+        Project = db.Project;
+
+        Project.findAll({
             where: {
                 id: req.params.id
-            }
-        }).then(function(results) {
-            if (results.length !== 0) {
-                res.json(results);
-
-            }
-        })
-    })
+            },
+            include: db.Steps
+        }).then(function(result) {
+            res.json(result)
+        });
+    });
 
 
 
