@@ -53,6 +53,13 @@
 }
 
 /* project panel */
+.instructionsForCompletion {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;    
+}
+
 #projectPanelHeader {
     font-size: 30px;
     text-align: center;
@@ -87,6 +94,28 @@
     width: 33%;
     padding: 10px;
 }
+
+/* complete button */
+.completeBtn {
+    width: 2%;
+    height: 0;
+    padding-bottom: 2%;
+    border-radius: 50%;
+    border: 2px solid #eeeeee;
+    overflow: hidden;
+    background: #343a40;
+    box-shadow: 0 0 3px gray;
+}
+.completeBtn:hover {
+    background: #262626;
+}
+/* theoretically for the check mark that I can't get in the button */
+/* .completeBtn img {
+    display: block;
+    width: 76%;
+    padding: 12%;
+    height: auto;
+} */
 
 /* footer */
 footer {

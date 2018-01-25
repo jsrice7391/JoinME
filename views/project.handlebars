@@ -15,32 +15,36 @@
         </div>
     </nav>
 
+    <div class="instructionsForCompletion">
+        <h3>Click the step completion<span><img src="assets/images/" class="img-fluid" id="completeBtnInstructions">
+    </span>button to mark a step as completed in your project!</h3>
+    </div>
 
     <div class="card" id="projectPanel">
-        <div class="card-header" id="projectPanelHeader">Emma's project{{Project.Project_Name}}</div>
+        <div class="card-header" id="projectPanelHeader">{{Project.Project_Name}}</div>
         <table class="projectPanelTable" border="1">
             <tbody class="projectPanelTableBody">
                 <tr>
-                    {{#each Step.Step}}
-                    <th class="projectTableHeaders">Step One{{this.Step}}</th>
-                    <th class="projectTableHeaders">Step one description here{{this.Step_description}}</th>
-                    <th class="projectTableHeaders">Completed{{this.Completed}}</th>
-                    {{/each}}
+                    <th class="projectTableHeaders">Step Name</th>
+                    <th class="projectTableHeaders">Step Description</th>
+                    <th class="projectTableHeaders">Completion Status</th>
                 </tr>
+                {{#each Step}}
                 <tr>
-                    <th class="projectTableHeaders">Step Two</th>
-                    <th class="projectTableHeaders">Step two description is kind of long but that's ok becuase this table header will adjust size</th>
-                    <th class="projectTableHeaders">Incomplete</th>
+                    <td class="stepName">{{Step}}</td>
+                    <td class="stepDescription">{{Step_description}}</td>
+                    <td class="stepCompletionStatus">{{Completed}}</th>
                 </tr>
-                <tr>
-                    <th class="projectTableHeaders">Step Three</th>
-                    <th class="projectTableHeaders">Step three description here</th>
-                    <th class="projectTableHeaders">Incomplete</th>
-                </tr>
+                {{/each}}
             </tbody>
         </table>
     </div>
 
+    <div class="completeBtn">
+        <a href="#"></a>
+            <span class="glyphicon glyphicon-ok"></span>
+        </a>
+    </div>
 
     <!--footer-->
     <footer class="fixed-bottom">
