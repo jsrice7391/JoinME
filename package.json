@@ -32,15 +32,11 @@
     "devDependencies": {
         "chai": "^4.1.2",
         "dotenv": "^4.0.0",
-<<<<<<< HEAD
-        "jasmine": "^2.9.0",
-=======
         "jasmine": "^2.8.0",
         "jasmine-core": "^2.9.1",
         "karma": "^2.0.0",
         "karma-chrome-launcher": "^2.2.0",
         "karma-jasmine": "^1.1.1",
->>>>>>> 8e3fa4630a451f2dc1ef2cb9306d1abcb0e99cd7
         "mocha": "^4.1.0"
     }
 }
