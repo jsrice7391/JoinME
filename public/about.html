@@ -25,7 +25,15 @@
             <a class="nav-link disabled" id="joinmeNavLink" href="/">JoinME</a>
             <a class="nav-link" href="/index">Home</a>
             <a class="nav-link" id="activeNavLink" href="#">About</a>
-            <a class="nav-link" href="/searchProject">Search Projects</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Search Projects
+            </a>
+        <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Fitness</a>
+            <a class="dropdown-item" href="#">Diet</a>
+            <a class="dropdown-item" href="#">Social</a>
+        </div>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>

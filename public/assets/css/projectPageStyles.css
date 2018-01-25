@@ -46,6 +46,12 @@
     font-family: 'Arimo', sans-serif;     
 }
 
+#drop {
+    width: 100px;
+    margin-left: 444px;
+    top: 70px;
+}
+
 #btnSignOut {
     position: absolute;
     right: 40px;

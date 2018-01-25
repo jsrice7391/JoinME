@@ -10,7 +10,15 @@
             <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
             <a class="nav-link" href="/index">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" href="/searchProject">Search Projects</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            Search Projects
+            </a>
+            <div class="dropdown-menu" id="drop" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Fitness</a>
+                <a class="dropdown-item" href="#">Diet</a>
+                <a class="dropdown-item" href="#">Social</a>
+            </div>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
@@ -19,7 +27,7 @@
         <h3>When you have completed a step
             <div class="completeBtn">
                 <a href="#"></a>
-                    <img src="./assets/images/confirm.png"/>
+                <img src="./assets/images/confirm.png" />
                 </a>
             </div> in your project click the completion button!
         </h3>

@@ -1,5 +1,9 @@
+var chai = require('chai');
 var expect = require("chai").expect;
-const testing = require("../routes/testing.js");
+var should = chai.should();
+var chaiHttp = require("chai-http");
+const testingProjectRoutes = require("../routes/projects_api_routes.js");
+const testingStepsRoutes = require("../routes/steps_routes.js");
 
 describe("Post user", function() {
     it("user entry to populate", function() {
@@ -13,14 +17,6 @@ describe("Post user", function() {
     });
 });
 
-describe("CreateNewProjectButton", function() {
-    it("should open the modal containing the project creation form when clicked"), function() {
-        expect(function() {
-
-        })
-    }
-})
-
 describe("Post user to user table", function() {
     it("it should post user to user database"), function() {
         expect(function() {
@@ -28,3 +24,15 @@ describe("Post user to user table", function() {
         })
     }
 })
+
+describe("getAllProjects", function () {
+    it("should list all projects", function (done) {
+      chai.request(testingProjectRoutes)
+        .get("/searchProject")
+        .end(function (err, res) {
+          res.should.have.status(200);
+          res.body.should.have.property("project_name");
+          setTimeout(done, 5000);
+        });
+    });
+  });
