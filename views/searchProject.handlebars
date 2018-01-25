@@ -10,7 +10,7 @@
         <div class="container">
             <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
             <a class="nav-link" href="/index">Home</a>
-            <a class="nav-link" href="../public/about.html">About</a>
+            <a class="nav-link" href="/about">About</a>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
             Search Projects
@@ -25,7 +25,7 @@
     </nav>
 
     <div class="instructionsForJoin">
-        <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
+        <h3>Click the JoinME<span><img src="/assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
     </span>button to join a project!</h3>
     </div>
 
@@ -38,9 +38,9 @@
             <ul class="list-group">
                 {{#each project}}
                 <li class="list-group-item" id="projectNameItem">
-                    <p class="projectNameInAllList"><a href="/projects/{{id}}">{{Project_name}}</a></p>
+                    <p class="projectNameInAllList"><a href="/project/{{id}}">{{Project_name}}</a></p>
                     <p class="projectDescriptionInAllList">{{Project_descripton}}</p>
-                    <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
+                    <a class="btn btn-circle mr-3"><img src="../assets/images/step4sm.jpg"></a>
                 </li>
                 {{/each}}
             </ul>
@@ -50,7 +50,7 @@
     {{!-- footer --}}
     <footer class="fixed-bottom">
         <div class="mx-auto" id="footImg" style="width: 100px;">
-            <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+            <img src="/assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
         </div>
     </footer>
 

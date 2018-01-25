@@ -1,4 +1,5 @@
 var authController = require("../config/authentication/auth");
+var db = require("../models");
 
 function isLoggedIn(req, res, next) {
 
@@ -28,8 +29,22 @@ module.exports = function(app, passport) {
 
 
     app.get("/index", isLoggedIn, function(req, res) {
-        res.render("index", { user: req.user });
+
+
+        var project = db.Project.findAll({
+            where: {
+                UserId: req.user.id
+            }
+        }).then(function(results) {
+            return results;
+        })
+
+        console.log("Here is the project:" + project);
+
+        res.render("index", { user: req.user, projects: project });
     });
+
+
 
     app.post("/signup", passport.authenticate("local-signup", {
         successRedirect: '/index', // redirect to the secure profile section
