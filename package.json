@@ -26,12 +26,12 @@
         "passport-facebook": "^2.1.1",
         "passport-local": "^1.0.0",
         "path": "^0.12.7",
-        "sequelize": "^4.31.1"
+        "sequelize": "^4.32.1"
     },
     "devDependencies": {
         "chai": "^4.1.2",
         "dotenv": "^4.0.0",
-        "jasmine": "^2.8.0",
+        "jasmine": "^2.9.0",
         "mocha": "^4.1.0"
     }
 }

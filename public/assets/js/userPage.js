@@ -22,13 +22,18 @@ $(document).ready(function() {
         var stepFour = $('#stepFour').val()
         var stepFourDescription = $('#stepFourDescription').val()
         var stepFive = $('#stepFive').val()
-        var stepFiveDescription = $('#stepFiveDescription').val()
+        var stepFiveDescription = $('#stepFiveDescription').val();
+        var the_user_id = $("#submitModalBtn").data("userid");
+
+        console.log(the_user_id)
+
 
 
         var sendProject = {
             Project_name: Project_name,
             Project_type: Project_type,
             Project_descripton: Project_descripton,
+            theUserId: the_user_id,
             stepOne: stepOne,
             stepOneDescription: stepOneDescription,
             stepTwo: stepTwo,

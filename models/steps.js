@@ -17,16 +17,12 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: false
         }
+
     });
 
 
     Step.associate = function(models) {
-        Step.hasOne(models.Project, {
-            onDelete: "CASCADE",
-            foreignKey: {
-                allowNull: false
-            }
-        });
+        Step.belongsTo(models.Project);
     };
 
     Step.afterValidate(function(step) {
