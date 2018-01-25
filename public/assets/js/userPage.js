@@ -1,8 +1,31 @@
-$(document).ready(function () {
+$(document).ready(function() {
+
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+
 
     console.log("this was loaded.")
-    // Create a new project function
-    $('#submitModalBtn').click(function (e) {
+        // Create a new project function
+    $('#submitModalBtn').click(function(e) {
 
         var Project_name = $('#projectName').val()
         var Project_type = $('#inputGroupSelect02').val()
@@ -87,14 +110,15 @@ $(document).ready(function () {
             type: "POST",
             data: sendProject
         }).then(
-            function (result) {
-                $('#newProjectForm').serialize(),function (data, status, xhr) {
+            function(result) {
+                $('#newProjectForm').serialize(),
+                    function(data, status, xhr) {
                         href = "/searchProjects";
                     };
             }
         );
 
-       
+
         //     function (data, status, xhr) {
         //     function (data, status, xhr) {
         //         href = "/searchProjects";
@@ -106,20 +130,19 @@ $(document).ready(function () {
         // }
 
         //below is the post for the steps
-
         //stepDetail is an object that holds the details needed to post
         //a single step. at the moment, it uses just the first step as a placeholder
         //but will be done within a loop to post all the steps to a project
 
-       
 
-console.log(stepOneDetail.Step + " is the first step.")
+
+        console.log(stepOneDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
             data: stepOneDetail
-            
+
         }).then(
-            function (result) {
+            function(result) {
 
             }
         );
@@ -128,9 +151,9 @@ console.log(stepOneDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
             data: stepTwoDetail
-            
+
         }).then(
-            function (result) {
+            function(result) {
 
             }
         );
@@ -139,9 +162,9 @@ console.log(stepOneDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
             data: stepThreeDetail
-            
+
         }).then(
-            function (result) {
+            function(result) {
 
             }
         );
@@ -150,9 +173,9 @@ console.log(stepOneDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
             data: stepFourDetail
-            
+
         }).then(
-            function (result) {
+            function(result) {
 
             }
         );
@@ -161,51 +184,18 @@ console.log(stepOneDetail.Step + " is the first step.")
         $.ajax("/api/steps/", {
             type: "POST",
             data: stepFiveDetail
-            
+
         }).then(
-            function (result) {
+            function(result) {
 
             }
         );
     });
 
-    // Sign out function w/ error handling.
-    $("#btnSignOut").on("click", function () {
-        alert("btn worked");
-
-        function signOut() {
-            firebase.auth().signOut().then(function () {
-                // Sign-out successful.
-                alert("signed out");
-                window.location = "/"; //After successful sign out, user will be redirected to the login page
-            }).catch(function (error) {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                var email = error.email;
-                var credential = error.credential;
-            });
-        }
-    });
-
-    // $("#projectSearchBtn").on("click", function () {
-
-    // })
 
 
-    // DELETE THIS?
-    // var navbar = $("#navbarUserPage");
-    // var origOffsetY = navbar.offset().top;
 
-    // function scroll() {
-    //     if ($(window).scrollTop() >= origOffsetY) {
-    //         $('.navbarUserPage').addClass('sticky');
-    //         $('.content').addClass('menu-padding');
-    //     } else {
-    //         $('.navbarUserPage').removeClass('.navbar-fixed-top');
-    //         $('.content').removeClass('menu-padding');
-    //     }
-    // }
 
-    // document.onscroll = scroll;
+
 
 });

@@ -7,10 +7,10 @@
     {{!-- navbar --}}
     <nav class="navbar sticky-top navbar-dark bg-dark" id="joinmeNavbar">
         <div class="container">
-            <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
-            <a class="nav-link disabled" id="activeNavLink" href="#">Home</a>
+            <a class="nav-link disabled" id="joinmeNavLink" href="/">JoinME</a>
+            <a class="nav-link disabled" id="activeNavLink" href="/">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link" href="/searchProject">Search Projects</a>
+            <a class="nav-link" onclick="myFunction()">Projects</a>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
@@ -18,7 +18,7 @@
     {{!-- welcome panel --}}
     <div class="card" id="welcomePanel">
         <div class="card-body" id="welcomePanelBody">
-            <h5 class="card-title" id="welcomePanelTitle">Hello, Tom!</h5>
+            <h5 class="card-title" id="welcomePanelTitle">Hello, {{user.name}}</h5>
             <h6 class="card-subtitle mb-2" id="welcomePanelText">View your current projects below or create an entirely new one. There is no limit to ambition. You can also search
                 our list of existing projects to join in on.
             </h6>
@@ -53,9 +53,9 @@
                     <div class="input-group mb-3" id="projectType">
                         <select class="custom-select" id="inputGroupSelect02">
                                         <option selected>Choose a Project Type</option>
-                                        <option value="1">Fitness</option>
-                                        <option value="2">Diet</option>
-                                        <option value="3">Social</option>
+                                        <option value="fitness">Fitness</option>
+                                        <option value="diet">Diet</option>
+                                        <option value="social">Social</option>
                                     </select>
                         <div class="input-group-append">
                             <label class="input-group-text" for="inputGroupSelect02">Options</label>
@@ -119,7 +119,7 @@
 
                     <div class="form-group" id="submitFormGroup">
                         <label for="submitModalBtn" class="modalGoodbyeMessage">Click "submit" and take that first step.</label>
-                        <button type="button" class="btn btn-primary" id="submitModalBtn" value="submit" href="/api/projects" data-id="{{id}}">submit</button>
+                        <a type="button" class="btn btn-primary" id="submitModalBtn" value="submit" href="/api/projects" data-userId="{{user.id}}">submit</a>
                     </div>
                 </form>
             </div>

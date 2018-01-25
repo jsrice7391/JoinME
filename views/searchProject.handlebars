@@ -11,44 +11,29 @@
             <a class="nav-link disabled" id="joinmeNavLink" href="#">JoinME</a>
             <a class="nav-link" href="/user">Home</a>
             <a class="nav-link" href="../public/about.html">About</a>
-            <a class="nav-link disabled" id="activeNavLink" href="#">Search Projects</a>
+            <a class="nav-link disabled" id="activeNavLink" href="">Search Projects</a>
             <a class="btn btn-default navbar-btn" id="btnSignOut" href="/login">Sign Out</a>
         </div>
     </nav>
-<script>
-
-
-//get all projects
-
-
-
-$.getJSON('/api/projects', function(results) {
-    console.log(projects);
- 
-});
-
-   
-console.log(projects + " is the list of projects.")
-
-
-</script>
 
     <div class="instructionsForJoin">
         <h3>Click the JoinME<span><img src="assets/images/step4sm.jpg" class="img-fluid" id="joinmeBtnInstructions" alt="Sample photo">
     </span>button to join a project!</h3>
     </div>
-
     {{!-- user projects list --}}
     <div class="card" id="allProjectsPanel">
-        <div class="card-header" id="allProjectsPanelHeader">All JoinME Projects</div>
+        <div class="card-header" id="allProjectsPanelHeader">All {{project.Project_Type}}Projects</div>
+
+       
         <div class="card-body" id="allProjectsListPanelBody">
             <ul class="list-group">
+                 {{#each project}}
                 <li class="list-group-item" id="projectNameItem">
-                    <p class="projectNameInAllList">Justin's Dummy Project</p>
-                    <p class="projectDescriptionInAllList">This is Justin's super cool project about some of his personal goals that he would like to track through
-                        this super cool app.</p>
+                    <p class="projectNameInAllList"><a href="/projects/{{id}}">{{Project_name}}</a></p>
+                    <p class="projectDescriptionInAllList">{{Project_descripton}}</p>
                     <a class="btn btn-circle mr-3"><img src="./assets/images/step4sm.jpg"></a>
                 </li>
+                {{/each}}
             </ul>
         </div>
     </div>

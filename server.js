@@ -22,7 +22,6 @@ app.use("/public", express.static("public"));
 app.use(express.static("public"));
 
 var model = require("./models")
-console.log(model)
     // required for passport
 require('./config/passport/passport')(passport, model.User); // pass passport for configuration
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
@@ -46,8 +45,8 @@ require('./routes/steps_routes.js')(app, passport);
 
 //{force:true} will drop table
 
-db.sequelize.sync({force:true}).then(function() {
+db.sequelize.sync({}).then(function() {
     app.listen(PORT, function() {
         console.log("APP is listening on Port: " + PORT);
     });
-})
+});
