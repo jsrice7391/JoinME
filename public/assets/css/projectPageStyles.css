@@ -125,12 +125,12 @@
     background: #262626;
 }
 /* theoretically for the check mark that I can't get in the button */
-/* .completeBtn img {
+.completeBtn img {
     display: block;
-    width: 76%;
-    padding: 12%;
+    width: 95%;
+    padding: 15%;
     height: auto;
-} */
+}
 
 /* footer */
 footer {
