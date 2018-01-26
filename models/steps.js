@@ -9,7 +9,6 @@ module.exports = function(sequelize, DataTypes) {
         },
         Step_description: {
             type: DataTypes.TEXT,
-            allowNull: false,
             len: [1]
         },
         Completed: {
@@ -17,23 +16,19 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: false
         }
+
     });
 
 
     Step.associate = function(models) {
-        Step.belongsTo(models.Project, {
-            onDelete: "CASCADE",
-            foreignKey: {
-                allowNull: false
-            }
-        });
+        Step.belongsTo(models.Project);
     };
 
     Step.afterValidate(function(step) {
         if (step.Completed === "True") {
-          console.log("Send message")
+            console.log("Send message")
         }
-      })
+    })
 
     return Step;
 };

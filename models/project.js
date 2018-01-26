@@ -18,8 +18,9 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false,
             len: [1]
-        }
+        },
     });
+
 
     Project.associate = function(models) {
         Project.belongsTo(models.User, {
@@ -28,7 +29,14 @@ module.exports = function(sequelize, DataTypes) {
                 allowNull: false
             }
         });
+
+        Project.hasMany(models.Step, { as: "step" });
     };
+
+
+
+
+
 
     // Project.belongsToMany(User, {through: 'UserProject'});
     // User.belongsToMany(Project, {through: 'UserProject'});

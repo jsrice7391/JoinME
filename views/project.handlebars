@@ -9,7 +9,7 @@
         <div class="container">
             <a class="nav-link" id="joinmeNavLink" href="/">JoinME</a>
             <a class="nav-link" href="/index">Home</a>
-            <a class="nav-link" href="../public/about.html">About</a>
+            <a class="nav-link" href="/about">About</a>
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
             Search Projects
@@ -27,7 +27,7 @@
         <h3>When you have completed a step
             <div class="completeBtn">
                 <a href="#"></a>
-                <img src="./assets/images/confirm.png" />
+                <img src="../assets/images/confirm.png" />
                 </a>
             </div> in your project click the completion button!
         </h3>
@@ -35,21 +35,25 @@
 
     {{!-- steps panel --}}
     <div class="card" id="projectPanel">
-        <div class="card-header" id="projectPanelHeader">{{Project.Project_Name}}</div>
+        <div class="card-header" id="projectPanelHeader">
+           <h2>{{project.Project_name}}</h2>
+        </div>
+<br/>
+
         <table class="projectPanelTable" border="1">
             <tbody class="projectPanelTableBody">
-                <tr>
-                    <th class="projectTableHeaders">Step Name</th>
-                    <th class="projectTableHeaders">Step Description</th>
-                    <th class="projectTableHeaders">Completion Status</th>
+                 {{#each project.step}}
+                <tr> 
+                    <th class="projectTableHeaders">{{Step}}</th>
+                    {{!-- <th class="projectTableHeaders">{{Step_description}}</th> --}}
+                    <th class="projectTableHeaders"><div class="completeBtn" data-userId="{{id}}">
+                        <a data-userId="{{id}}">
+                        <img src="../assets/images/confirm.png" data-userId="{{id}}"/>
+                        </a>
+                    </div></th>
                 </tr>
-                {{!-- {{#each Step}} --}}
-                <tr>
-                    <td class="stepName">{{Step}}</td>
-                    <td class="stepDescription">{{Step_description}}</td>
-                    <td class="stepCompletionStatus">Completed</th>
-                </tr>
-                {{!-- {{/each}} --}}
+                    {{/each}}
+                    
             </tbody>
         </table>
     </div>
@@ -57,7 +61,7 @@
     <!--footer-->
     <footer class="fixed-bottom">
         <div class="mx-auto" id="footImg" style="width: 100px;">
-            <img src="assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
+            <img src="../assets/images/step4.jpg" class="img-fluid" alt="Sample photo">
         </div>
     </footer>
 

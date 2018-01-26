@@ -33,7 +33,7 @@ module.exports = function(app) {
     app.put("/api/steps/:id", function(req, res) {
         db.Step.update({ Completed: true }, {
             where: {
-                id: 1
+                id: req.params.id
             }
         }).then(function(results) {
             res.json(results);
