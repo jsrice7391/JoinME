@@ -17,8 +17,7 @@ $(document).ready(function() {
 
 
 
-        // $(".stepCompletionStatus").append($(".completeBtn"));
-        // // })
+        $(".stepCompletionStatus").append($(".completeBtn"));
 
     })
 
