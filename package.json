@@ -1,38 +1,42 @@
 {
-    "name": "project2",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha",
-        "start": "node server.js"
-    },
-    "keywords": [],
-    "author": "Justin Rice <jsrice7391@gmail.com>",
-    "license": "ISC",
-    "dependencies": {
-        "bcrypt-nodejs": "0.0.3",
-        "body-parser": "^1.18.2",
-        "connect-flash": "^0.1.1",
-        "ejs": "^2.5.7",
-        "express": "^4.16.2",
-        "express-handlebars": "^3.0.0",
-        "express-session": "^1.15.6",
-        "firebaseui": "^2.5.1",
-        "method-override": "^2.3.10",
-        "mysql": "^2.15.0",
-        "mysql2": "^1.5.1",
-        "nodemon": "^1.14.11",
-        "passport": "^0.4.0",
-        "passport-facebook": "^2.1.1",
-        "passport-local": "^1.0.0",
-        "path": "^0.12.7",
-        "sequelize": "^4.31.1"
-    },
-    "devDependencies": {
-        "chai": "^4.1.2",
-        "dotenv": "^4.0.0",
-        "jasmine": "^2.8.0",
-        "mocha": "^4.1.0"
-    }
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "keywords": [],
+  "author": "Justin Rice <jsrice7391@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "firebaseui": "^2.5.1",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "nodemon": "^1.14.11",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.31.1",
+    "snyk": "^1.316.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "dotenv": "^4.0.0",
+    "jasmine": "^2.8.0",
+    "mocha": "^4.1.0"
+  },
+  "snyk": true
 }
