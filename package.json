@@ -12,10 +12,10 @@
     "license": "ISC",
     "dependencies": {
         "bcrypt-nodejs": "0.0.3",
-        "body-parser": "^1.18.2",
+        "body-parser": "^1.19.2",
         "connect-flash": "^0.1.1",
         "ejs": "^2.5.7",
-        "express": "^4.16.2",
+        "express": "^4.17.3",
         "express-handlebars": "^3.0.0",
         "express-session": "^1.15.6",
         "firebaseui": "^2.5.1",
