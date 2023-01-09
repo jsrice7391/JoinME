@@ -19,7 +19,7 @@
         "express-handlebars": "^3.0.0",
         "express-session": "^1.15.6",
         "firebaseui": "^2.5.1",
-        "method-override": "^2.3.10",
+        "method-override": "^3.0.0",
         "mysql": "^2.15.0",
         "mysql2": "^1.5.1",
         "nodemon": "^1.14.11",
@@ -27,7 +27,7 @@
         "passport-facebook": "^2.1.1",
         "passport-local": "^1.0.0",
         "path": "^0.12.7",
-        "sequelize": "^4.31.1"
+        "sequelize": "^5.1.0"
     },
     "devDependencies": {
         "chai": "^4.1.2",
