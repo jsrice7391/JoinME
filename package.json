@@ -16,7 +16,7 @@
         "connect-flash": "^0.1.1",
         "ejs": "^2.5.7",
         "express": "^4.19.2",
-        "express-handlebars": "^3.0.0",
+        "express-handlebars": "^7.0.0",
         "express-session": "^1.15.6",
         "firebaseui": "^2.5.1",
         "method-override": "^2.3.10",
